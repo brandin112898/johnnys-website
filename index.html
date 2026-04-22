@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Johnny's Grill & Pizzeria</title>
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --bg-2: #171717;
+      --card: #1a1a1a;
+      --card-2: #202020;
+      --line: #2a2a2a;
+      --text: #ffffff;
+      --text-soft: #d7d7d7;
+      --text-muted: #9a9a9a;
+      --accent: #e11d2e;
+      --accent-hover: #f12638;
+      --warm: rgba(255, 125, 20, 0.12);
+      --red-glow: rgba(225, 29, 46, 0.14);
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --max: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, var(--red-glow), transparent 35%),
+        radial-gradient(circle at bottom, var(--warm), transparent 40%),
+        linear-gradient(180deg, #111111 0%, #0d0d0d 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+      box-shadow: 0 0 0 0 rgba(225, 29, 46, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      box-shadow: 0 0 0 8px rgba(225, 29, 46, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    .btn-secondary:hover {
+      background: #1d1d1d;
+      border-color: #666;
+      transform: translateY(-1px);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(15, 15, 15, 0.82);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 82px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .brand-title {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: var(--text-soft);
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero {
+      padding: 72px 0 48px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #ff5b67;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
+
+    .hero h2 {
+      margin: 18px 0 0;
+      font-size: clamp(18px, 2vw, 24px);
+      font-weight: 600;
+      color: var(--text-soft);
+    }
+
+    .hero p {
+      margin: 22px 0 0;
+      max-width: 620px;
+      color: var(--text-muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero-card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)),
+        linear-gradient(135deg, #1a1a1a, #111111);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(225, 29, 46, 0.20), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(255, 125, 20, 0.16), transparent 36%);
+      pointer-events: none;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(0,0,0,0.58), rgba(0,0,0,0.10)),
+        url("https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1400&q=80")
+        center/cover no-repeat;
+    }
+
+    .hero-card-content {
+      position: relative;
+      z-index: 1;
+      padding: 26px;
+    }
+
+    .hero-card-label {
+      color: rgba(255,255,255,0.75);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+
+    .hero-card-title {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 10px;
+    }
+
+    .hero-card-text {
+      color: rgba(255,255,255,0.82);
+      line-height: 1.6;
+      max-width: 430px;
+    }
+
+    .section {
+      padding: 42px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .section-kicker {
+      color: #ff5b67;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.08;
+    }
+
+    .section-copy {
+      margin: 14px auto 0;
+      max-width: 760px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .cards-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card), var(--card-2));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(225, 29, 46, 0.5);
+    }
+
+    .card-image {
+      height: 220px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.15;
+    }
+
+    .card-text {
+      margin: 12px 0 0;
+      color: var(--text-muted);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #ff5b67;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .band {
+      margin: 18px 0;
+      padding: 34px 0;
+      background:
+        linear-gradient(90deg, #111111 0%, #181818 50%, #111111 100%);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .favorites-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .favorite-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #1a1a1a, #141414);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .favorite-image {
+      height: 210px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .favorite-body {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .favorite-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .specials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 28px;
+    }
+
+    .special-left {
+      padding: 10px 0;
+    }
+
+    .special-left h3 {
+      margin: 0;
+      font-size: 40px;
+      line-height: 1.05;
+    }
+
+    .special-left p {
+      margin: 16px 0 0;
+      max-width: 580px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .special-card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)),
+        linear-gradient(135deg, #1a1a1a, #111111);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .special-tag {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .special-headline {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 0 0 8px;
+      line-height: 1.08;
+    }
+
+    .special-text {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .about-preview {
+      text-align: center;
+      padding-top: 12px;
+    }
+
+    .footer {
+      margin-top: 36px;
+      border-top: 1px solid var(--line);
+      background: rgba(10, 10, 10, 0.7);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap: 24px;
+      padding: 34px 0 50px;
+    }
+
+    .footer-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .footer-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .footer-copy,
+    .footer-list {
+      color: var(--text-soft);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .footer-list div + div {
+      margin-top: 2px;
+    }
+
+    .spacer-20 {
+      height: 20px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .specials,
+      .footer-grid,
+      .cards-4,
+      .favorites-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-card {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
+      .nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .nav-actions {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .hero-grid,
+      .cards-4,
+      .favorites-grid,
+      .specials,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 400px;
+      }
+
+      .hero-card-title {
+        font-size: 28px;
+      }
+
+      .section {
+        padding: 34px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-title">Johnny's Grill &amp; Pizzeria</div>
+        <div class="brand-sub">Locally Owned • Newbury Township, Ohio</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="/" target="_top">Home</a>
+        <a href="/menu" target="_top">Menu</a>
+        <a href="/about" target="_top">About Us</a>
+        <a href="/employment" target="_top">Employment</a>
+        <a href="https://deals.spoton.com/682b7aca501c6df83e06a58a/join-loyalty?utm_medium=link" target="_blank">Loyalty</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="tel:4405641331">Call</a>
+        <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Newbury's Local Favorite</div>
+
+          <h1>Johnny's Grill &amp; Pizzeria</h1>
+
+          <h2>Pizza • Gyros • Burgers • Philly Cheesesteaks</h2>
+
+          <p>
+            Locally owned and proudly serving Newbury Township with handcrafted pizza,
+            authentic gyros, stacked burgers, and loaded Philly cheesesteaks.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
+            <a class="btn btn-secondary" href="/menu" target="_top">View Menu</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-image"></div>
+          <div class="hero-card-content">
+            <div class="hero-card-label">Signature Item</div>
+            <div class="hero-card-title">Johnny's Famous Pizza</div>
+            <div class="hero-card-text">
+              Fresh-baked, loaded with toppings, and built to be the first thing people crave.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="
+          background: linear-gradient(135deg, rgba(225,29,46,0.15), rgba(255,125,20,0.08));
+          border: 1px solid rgba(255,255,255,0.08);
+          border-radius: 24px;
+          padding: 28px;
+          text-align: center;
+          box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+        ">
+          <div style="
+            font-size: 12px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: #ff5b67;
+            font-weight: 700;
+            margin-bottom: 10px;
+          ">
+            Now Hiring
+          </div>
+
+          <h2 style="
+            margin: 0;
+            font-size: 34px;
+            line-height: 1.1;
+          ">
+            Join the Team at Johnny’s
+          </h2>
+
+          <p style="
+            margin: 14px auto 0;
+            max-width: 600px;
+            color: #cfcfcf;
+            line-height: 1.7;
+            font-size: 16px;
+          ">
+            We’re looking for reliable, hardworking people to join our team.
+            If you enjoy a fast-paced environment and great food, apply today.
+          </p>
+
+          <div style="margin-top: 20px;">
+            <a href="/employment" target="_top" style="
+              display: inline-block;
+              background: #e11d2e;
+              color: #fff;
+              padding: 14px 26px;
+              border-radius: 14px;
+              font-weight: 700;
+              text-decoration: none;
+            ">
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Explore The Menu</div>
+          <h2 class="section-title">Johnny's Favorites</h2>
+          <p class="section-copy">
+            From handcrafted pizza to loaded Philly cheesesteaks, explore the full menu and see what Johnny’s is known for.
+          </p>
+        </div>
+
+        <div class="cards-4">
+          <a class="card" href="/menu" target="_top">
+            <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="card-body">
+              <h3 class="card-title">Johnny’s Famous Pizza</h3>
+              <p class="card-text">Hand-tossed pizza loaded with toppings and baked to perfection.</p>
+              <span class="card-link">View Menu →</span>
+            </div>
+          </a>
+
+          <a class="card" href="/menu" target="_top">
+            <div class="card-image" style="background-image:url('https://static.wixstatic.com/media/5c85b3_f70264662c8047e6b9b790da979fe11f~mv2.png');"></div>
+            <div class="card-body">
+              <h3 class="card-title">Authentic Gyros</h3>
+              <p class="card-text">Seasoned lamb &amp; beef gyro served with fresh toppings and house-style tzatziki.</p>
+              <span class="card-link">View Menu →</span>
+            </div>
+          </a>
+
+          <a class="card" href="/menu" target="_top">
+            <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="card-body">
+              <h3 class="card-title">Stacked Burgers</h3>
+              <p class="card-text">Juicy burgers grilled fresh and stacked with bold flavor.</p>
+              <span class="card-link">View Menu →</span>
+            </div>
+          </a>
+
+          <a class="card" href="/menu" target="_top">
+            <div class="card-image" style="background-image:url('https://static.wixstatic.com/media/5c85b3_b26c06c05a7540ef9b7343d3d3810b1e~mv2.jpeg');"></div>
+            <div class="card-body">
+              <h3 class="card-title">Philly Cheesesteaks</h3>
+              <p class="card-text">Thin-sliced steak, melted cheese, and grilled onions on a fresh roll.</p>
+              <span class="card-link">View Menu →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Customer Favorites</div>
+          <h2 class="section-title">Popular Orders</h2>
+        </div>
+
+        <div class="favorites-grid">
+          <div class="favorite-card">
+            <div class="favorite-image" style="background-image:url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="favorite-body">
+              <h3 class="favorite-title">Johnny’s Famous Pizza</h3>
+              <div class="spacer-20"></div>
+              <a class="btn btn-secondary" href="/menu" target="_top">View Menu</a>
+            </div>
+          </div>
+
+          <div class="favorite-card">
+            <div class="favorite-image" style="background-image:url('https://static.wixstatic.com/media/5c85b3_f70264662c8047e6b9b790da979fe11f~mv2.png');"></div>
+            <div class="favorite-body">
+              <h3 class="favorite-title">Lamb Beef Gyro</h3>
+              <div class="spacer-20"></div>
+              <a class="btn btn-secondary" href="/menu" target="_top">View Menu</a>
+            </div>
+          </div>
+
+          <div class="favorite-card">
+            <div class="favorite-image" style="background-image:url('https://static.wixstatic.com/media/5c85b3_b26c06c05a7540ef9b7343d3d3810b1e~mv2.jpeg');"></div>
+            <div class="favorite-body">
+              <h3 class="favorite-title">Philly Cheesesteak</h3>
+              <div class="spacer-20"></div>
+              <a class="btn btn-secondary" href="/menu" target="_top">View Menu</a>
+            </div>
+          </div>
+
+          <div class="favorite-card">
+            <div class="favorite-image" style="background-image:url('https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="favorite-body">
+              <h3 class="favorite-title">Jumbo Wings</h3>
+              <div class="spacer-20"></div>
+              <a class="btn btn-secondary" href="/menu" target="_top">View Menu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="specials">
+          <div class="special-left">
+            <div class="section-kicker">Weekly Specials</div>
+            <h3>Deals &amp; Limited-Time Offers</h3>
+            <p>
+              $41.59
+              12 Cut 1 Topping Pizza, House Salad, Cheesy Bread, and 12 Boneless / Traditional Wings Only Available on Fridays &amp; Saturdays.
+            </p>
+          </div>
+
+          <div class="special-card">
+            <div class="special-tag">Featured Special</div>
+            <h4 class="special-headline">Giant Reuben</h4>
+            <div class="special-text">
+              Perfect for your Irish needs.
+            </div>
+            <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-preview">
+      <div class="container">
+        <div class="section-kicker">About Johnny's</div>
+        <h2 class="section-title">Locally Owned. Built for the Community.</h2>
+        <p class="section-copy">
+          Johnny’s Grill &amp; Pizzeria proudly serves Newbury Township and surrounding communities with pizza, gyros, burgers, and Philly cheesesteaks. We’re a neighborhood restaurant focused on great food, generous portions, and friendly service.
+        </p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-secondary" href="/about" target="_top">Learn More</a>
+          <a class="btn btn-secondary" href="https://deals.spoton.com/682b7aca501c6df83e06a58a/join-loyalty?utm_medium=link" target="_blank">Join Loyalty</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-title">Johnny's Grill &amp; Pizzeria</div>
+        <div class="footer-copy">Locally Owned • Newbury Township, Ohio</div>
+      </div>
+
+      <div>
+        <div class="footer-label">Hours</div>
+        <div class="footer-list">
+          <div>Monday–Wednesday: 8:00 AM – 8:00 PM</div>
+          <div>Friday–Saturday: 8:00 AM – 9:00 PM</div>
+          <div>Closed Sunday</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-label">Contact</div>
+        <div class="footer-copy">Phone: <a href="tel:4405641331">440-564-1331</a></div>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
+          <a class="btn btn-secondary" href="https://deals.spoton.com/682b7aca501c6df83e06a58a/join-loyalty?utm_medium=link" target="_blank">Loyalty</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

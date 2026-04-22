@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employment | Johnny's Grill & Pizzeria</title>
+
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --line: #2a2a2a;
+      --line-soft: #333333;
+      --text: #ffffff;
+      --muted: #bdbdbd;
+      --accent: #e11d2e;
+      --accent-hover: #f12638;
+      --shadow: 0 20px 50px rgba(0,0,0,0.35);
+      --field-bg: #111111;
+      --section-bg: #151515;
+      --success-bg: rgba(34,197,94,.12);
+      --success-line: rgba(34,197,94,.35);
+      --error-bg: rgba(239,68,68,.12);
+      --error-line: rgba(239,68,68,.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(225,29,46,.12), transparent 35%),
+        linear-gradient(180deg,#111,#0d0d0d);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 24px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      background: rgba(15,15,15,.9);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+      z-index: 50;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .brand-title {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-block;
+      transition: .2s ease;
+      cursor: pointer;
+      border: 0;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      border: 1px solid #444;
+      color: #fff;
+      background: transparent;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--accent);
+      color: #fff;
+      background: transparent;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      background: rgba(225,29,46,.12);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 0 30px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin: 0;
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form-section {
+      padding: 20px 0 50px;
+    }
+
+    .form-card {
+      background: linear-gradient(180deg,#1a1a1a,#141414);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-title {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .form-sub {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+
+    .form-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      min-height: 200px;
+    }
+
+    .application-form {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin: 0 0 16px;
+    }
+
+    .block {
+      background: var(--section-bg);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .block-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .block-header h3 {
+      margin: 0;
+      font-size: 17px;
+    }
+
+    .remove-btn {
+      background: transparent;
+      border: 1px solid #555;
+      color: #fff;
+      border-radius: 999px;
+      width: 34px;
+      height: 34px;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .remove-btn:hover {
+      border-color: var(--accent);
+      color: #fff;
+      background: rgba(225,29,46,.12);
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .field label,
+    .group-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .req {
+      color: #ff8b95;
+    }
+
+    .span-2 {
+      grid-column: span 2;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      background: var(--field-bg);
+      border: 1px solid var(--line-soft);
+      color: #fff;
+      border-radius: 12px;
+      padding: 14px 14px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #8d8d8d;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(225,29,46,.15);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .checkbox-grid,
+    .radio-grid {
+      display: grid;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .checkbox-grid.inline-4,
+    .radio-grid.inline-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .choice {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      min-height: 68px;
+      padding: 14px 14px;
+      background: rgba(255,255,255,.02);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      line-height: 1.25;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .choice input {
+      width: 18px;
+      min-width: 18px;
+      height: 18px;
+      margin: 2px 0 0;
+      flex: 0 0 18px;
+      transform: none;
+    }
+
+    .choice span {
+      display: block;
+      flex: 1;
+    }
+
+    .actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .status {
+      display: none;
+      padding: 14px 16px;
+      border-radius: 14px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .status.show {
+      display: block;
+    }
+
+    .status.success {
+      background: var(--success-bg);
+      border: 1px solid var(--success-line);
+      color: #d8ffe5;
+    }
+
+    .status.error {
+      background: var(--error-bg);
+      border: 1px solid var(--error-line);
+      color: #ffd6d6;
+    }
+
+    .submit-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .submit-note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    @media (max-width: 1024px) {
+      .checkbox-grid.inline-4,
+      .radio-grid.inline-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .span-2 {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .form-card {
+        padding: 20px;
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .checkbox-grid.inline-4,
+      .radio-grid.inline-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .choice {
+        min-height: 56px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand-title">Johnny's Grill & Pizzeria</div>
+
+      <div class="nav">
+        <a class="btn btn-secondary" href="/" target="_top">Home</a>
+        <a class="btn btn-secondary" href="/menu" target="_top">Menu</a>
+        <a class="btn btn-secondary" href="/about" target="_top">About</a>
+        <a class="btn btn-secondary" href="/employment" target="_top">Employment</a>
+        <a class="btn btn-secondary" href="https://deals.spoton.com/682b7aca501c6df83e06a58a/join-loyalty?utm_medium=link" target="_blank">Loyalty</a>
+        <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Join the Johnny’s Team</h1>
+      <p>
+        We’re looking for hardworking, reliable people to join our team.
+        Fill out the application below and we’ll be in touch.
+      </p>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <div class="container">
+      <div class="form-card">
+
+        <div class="form-title">Apply Online</div>
+        <div class="form-sub">
+          Takes just a couple minutes. Please make sure your contact info is correct.
+        </div>
+
+        <div class="form-wrapper">
+
+          <form id="employmentForm" class="application-form">
+
+            <section>
+              <h2 class="section-title">Employment Application</h2>
+
+              <div class="block">
+                <div class="grid grid-2">
+                  <div class="field">
+                    <label for="firstName">First Name <span class="req">*</span></label>
+                    <input id="firstName" name="firstName" type="text" placeholder="First" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="lastName">Last Name <span class="req">*</span></label>
+                    <input id="lastName" name="lastName" type="text" placeholder="Last" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="phone">Phone <span class="req">*</span></label>
+                    <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="email">Email <span class="req">*</span></label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                  </div>
+                </div>
+
+                <div class="grid" style="margin-top:16px;">
+                  <div class="field">
+                    <label for="address1">Address Line 1</label>
+                    <input id="address1" name="address1" type="text" placeholder="Address Line 1" />
+                  </div>
+
+                  <div class="field">
+                    <label for="address2">Address Line 2</label>
+                    <input id="address2" name="address2" type="text" placeholder="Address Line 2" />
+                  </div>
+
+                  <div class="grid grid-3">
+                    <div class="field">
+                      <label for="city">City</label>
+                      <input id="city" name="city" type="text" placeholder="City" />
+                    </div>
+
+                    <div class="field">
+                      <label for="state">State</label>
+                      <select id="state" name="state">
+                        <option value="">Select State</option>
+                        <option>OH</option>
+                        <option>PA</option>
+                        <option>WV</option>
+                        <option>MI</option>
+                        <option>IN</option>
+                        <option>NY</option>
+                        <option>KY</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+
+                    <div class="field">
+                      <label for="zip">Zip Code</label>
+                      <input id="zip" name="zip" type="text" placeholder="Zip Code" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid grid-3" style="margin-top:16px;">
+                  <div class="field span-2">
+                    <div class="group-label">Job Position <span class="req">*</span></div>
+                    <div class="checkbox-grid inline-4">
+                      <label class="choice"><input type="checkbox" name="jobPositions" value="Front End" /><span>Front End</span></label>
+                      <label class="choice"><input type="checkbox" name="jobPositions" value="Delivery Driver" /><span>Delivery Driver</span></label>
+                      <label class="choice"><input type="checkbox" name="jobPositions" value="Pizza Cook" /><span>Pizza Cook</span></label>
+                      <label class="choice"><input type="checkbox" name="jobPositions" value="Cook" /><span>Cook</span></label>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="startDate">Start Date</label>
+                    <input id="startDate" name="startDate" type="date" />
+                  </div>
+
+                  <div class="field">
+                    <label for="desiredPay">Desired Pay <span class="req">*</span></label>
+                    <input id="desiredPay" name="desiredPay" type="text" placeholder="$ / hour" required />
+                  </div>
+                </div>
+
+                <div class="grid grid-2" style="margin-top:16px;">
+                  <div class="field">
+                    <label for="availability">Availability / Days & Hours</label>
+                    <textarea id="availability" name="availability" placeholder="Tell us what days and hours you are available to work."></textarea>
+                  </div>
+
+                  <div class="field">
+                    <label for="notes">Anything else we should know?</label>
+                    <textarea id="notes" name="notes" placeholder="Experience, scheduling notes, certifications, etc."></textarea>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="section-title">Education</h2>
+              <div id="schoolsContainer"></div>
+              <div class="actions-row">
+                <button type="button" class="btn-outline" id="addSchoolBtn">+ Add School</button>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="section-title">Employment History</h2>
+              <div id="employmentContainer"></div>
+              <div class="actions-row">
+                <button type="button" class="btn-outline" id="addEmploymentBtn">+ Add Employment History</button>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="section-title">References</h2>
+              <div id="referencesContainer"></div>
+              <div class="actions-row">
+                <button type="button" class="btn-outline" id="addReferenceBtn">+ Add Reference</button>
+              </div>
+            </section>
+
+            <div id="formStatus" class="status"></div>
+
+            <div class="submit-wrap">
+              <button type="submit" id="submitBtn" class="btn btn-primary">Submit Application</button>
+              <div class="submit-note">Your application will be sent directly to management.</div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    Johnny’s Grill & Pizzeria • Newbury Township, Ohio
+  </footer>
+
+  <template id="schoolTemplate">
+    <div class="block dynamic-block school-block">
+      <div class="block-header">
+        <h3 class="school-title">School 1</h3>
+        <button type="button" class="remove-btn" data-remove="school" aria-label="Remove school">×</button>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="field">
+          <label>Name of School</label>
+          <input type="text" name="schoolName" placeholder="Name of School" />
+        </div>
+
+        <div class="field">
+          <div class="group-label">Type of School</div>
+          <div class="radio-grid inline-4">
+            <label class="choice"><input type="radio" value="High School" /><span>High School</span></label>
+            <label class="choice"><input type="radio" value="Bus. or Trade School" /><span>Bus. or Trade School</span></label>
+            <label class="choice"><input type="radio" value="College" /><span>College</span></label>
+            <label class="choice"><input type="radio" value="Professional School" /><span>Professional School</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Graduation Date</label>
+          <input type="date" name="graduationDate" />
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="employmentTemplate">
+    <div class="block dynamic-block employment-block">
+      <div class="block-header">
+        <h3 class="employment-title">Employment History 1</h3>
+        <button type="button" class="remove-btn" data-remove="employment" aria-label="Remove employment history">×</button>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="field">
+          <label>Employer</label>
+          <input type="text" name="employer" placeholder="Employer" />
+        </div>
+
+        <div class="field">
+          <label>Job Title</label>
+          <input type="text" name="jobTitle" placeholder="Job Title" />
+        </div>
+
+        <div class="field">
+          <label>Work Phone</label>
+          <input type="tel" name="workPhone" placeholder="Work Phone" />
+        </div>
+
+        <div class="field">
+          <label>End Pay Rate</label>
+          <input type="text" name="endPayRate" placeholder="End Pay Rate" />
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:16px;">
+        <div class="field">
+          <label>Address Line 1</label>
+          <input type="text" name="employmentAddress1" placeholder="Address Line 1" />
+        </div>
+
+        <div class="field">
+          <label>Address Line 2</label>
+          <input type="text" name="employmentAddress2" placeholder="Address Line 2" />
+        </div>
+
+        <div class="grid grid-3">
+          <div class="field">
+            <label>City</label>
+            <input type="text" name="employmentCity" placeholder="City" />
+          </div>
+
+          <div class="field">
+            <label>State</label>
+            <input type="text" name="employmentState" placeholder="State" />
+          </div>
+
+          <div class="field">
+            <label>Zip Code</label>
+            <input type="text" name="employmentZip" placeholder="Zip Code" />
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="field">
+            <label>Employed From</label>
+            <input type="date" name="employedFrom" />
+          </div>
+
+          <div class="field">
+            <label>Employed To</label>
+            <input type="date" name="employedTo" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Reason for Leaving</label>
+          <textarea name="reasonForLeaving" placeholder="Reason for leaving"></textarea>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="referenceTemplate">
+    <div class="block dynamic-block reference-block">
+      <div class="block-header">
+        <h3 class="reference-title">Reference 1</h3>
+        <button type="button" class="remove-btn" data-remove="reference" aria-label="Remove reference">×</button>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="field">
+          <label>First Name</label>
+          <input type="text" name="referenceFirstName" placeholder="First" />
+        </div>
+
+        <div class="field">
+          <label>Last Name</label>
+          <input type="text" name="referenceLastName" placeholder="Last" />
+        </div>
+
+        <div class="field">
+          <label>Company</label>
+          <input type="text" name="referenceCompany" placeholder="Company" />
+        </div>
+
+        <div class="field">
+          <label>Title</label>
+          <input type="text" name="referenceTitle" placeholder="Title" />
+        </div>
+
+        <div class="field">
+          <label>Phone</label>
+          <input type="tel" name="referencePhone" placeholder="Phone" />
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <input type="email" name="referenceEmail" placeholder="Email" />
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    const form = document.getElementById("employmentForm");
+    const statusBox = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("submitBtn");
+
+    const schoolsContainer = document.getElementById("schoolsContainer");
+    const employmentContainer = document.getElementById("employmentContainer");
+    const referencesContainer = document.getElementById("referencesContainer");
+
+    const schoolTemplate = document.getElementById("schoolTemplate");
+    const employmentTemplate = document.getElementById("employmentTemplate");
+    const referenceTemplate = document.getElementById("referenceTemplate");
+
+    function showStatus(message, type) {
+      statusBox.className = "status show " + type;
+      statusBox.textContent = message;
+    }
+
+    function clearStatus() {
+      statusBox.className = "status";
+      statusBox.textContent = "";
+    }
+
+    function addBlock(container, template, blockClass, titleClass, baseTitle) {
+      const clone = template.content.firstElementChild.cloneNode(true);
+      container.appendChild(clone);
+      renumberBlocks(container, blockClass, titleClass, baseTitle);
+      updateRemoveButtons(container);
+    }
+
+    function renumberBlocks(container, blockClass, titleClass, baseTitle) {
+      const blocks = container.querySelectorAll("." + blockClass);
+      blocks.forEach((block, index) => {
+        const title = block.querySelector("." + titleClass);
+        if (title) title.textContent = baseTitle + " " + (index + 1);
+
+        if (blockClass === "school-block") {
+          const radios = block.querySelectorAll('input[type="radio"]');
+          radios.forEach((radio) => {
+            radio.name = "schoolType_" + index;
+          });
+        }
+      });
+    }
+
+    function updateRemoveButtons(container) {
+      const blocks = container.querySelectorAll(".dynamic-block");
+      blocks.forEach((block) => {
+        const removeBtn = block.querySelector(".remove-btn");
+        if (removeBtn) {
+          removeBtn.style.display = blocks.length > 1 ? "inline-flex" : "none";
+          removeBtn.style.alignItems = "center";
+          removeBtn.style.justifyContent = "center";
+        }
+      });
+    }
+
+    function collectSchools() {
+      return [...schoolsContainer.querySelectorAll(".school-block")].map((block) => ({
+        schoolName: block.querySelector('input[name="schoolName"]').value.trim(),
+        schoolType: (block.querySelector('input[type="radio"]:checked') || {}).value || "",
+        graduationDate: block.querySelector('input[name="graduationDate"]').value || ""
+      })).filter(item => item.schoolName || item.schoolType || item.graduationDate);
+    }
+
+    function collectEmploymentHistory() {
+      return [...employmentContainer.querySelectorAll(".employment-block")].map((block) => ({
+        employer: block.querySelector('input[name="employer"]').value.trim(),
+        jobTitle: block.querySelector('input[name="jobTitle"]').value.trim(),
+        workPhone: block.querySelector('input[name="workPhone"]').value.trim(),
+        endPayRate: block.querySelector('input[name="endPayRate"]').value.trim(),
+        address1: block.querySelector('input[name="employmentAddress1"]').value.trim(),
+        address2: block.querySelector('input[name="employmentAddress2"]').value.trim(),
+        city: block.querySelector('input[name="employmentCity"]').value.trim(),
+        state: block.querySelector('input[name="employmentState"]').value.trim(),
+        zip: block.querySelector('input[name="employmentZip"]').value.trim(),
+        employedFrom: block.querySelector('input[name="employedFrom"]').value || "",
+        employedTo: block.querySelector('input[name="employedTo"]').value || "",
+        reasonForLeaving: block.querySelector('textarea[name="reasonForLeaving"]').value.trim()
+      })).filter(item =>
+        item.employer || item.jobTitle || item.workPhone || item.endPayRate ||
+        item.address1 || item.address2 || item.city || item.state || item.zip ||
+        item.employedFrom || item.employedTo || item.reasonForLeaving
+      );
+    }
+
+    function collectReferences() {
+      return [...referencesContainer.querySelectorAll(".reference-block")].map((block) => ({
+        firstName: block.querySelector('input[name="referenceFirstName"]').value.trim(),
+        lastName: block.querySelector('input[name="referenceLastName"]').value.trim(),
+        company: block.querySelector('input[name="referenceCompany"]').value.trim(),
+        title: block.querySelector('input[name="referenceTitle"]').value.trim(),
+        phone: block.querySelector('input[name="referencePhone"]').value.trim(),
+        email: block.querySelector('input[name="referenceEmail"]').value.trim()
+      })).filter(item =>
+        item.firstName || item.lastName || item.company || item.title || item.phone || item.email
+      );
+    }
+
+    function collectJobPositions() {
+      return [...document.querySelectorAll('input[name="jobPositions"]:checked')].map(input => input.value);
+    }
+
+    function validateForm() {
+      const jobPositions = collectJobPositions();
+      if (jobPositions.length === 0) {
+        showStatus("Please select at least one job position.", "error");
+        return false;
+      }
+      return true;
+    }
+
+    document.getElementById("addSchoolBtn").addEventListener("click", () => {
+      addBlock(schoolsContainer, schoolTemplate, "school-block", "school-title", "School");
+    });
+
+    document.getElementById("addEmploymentBtn").addEventListener("click", () => {
+      addBlock(employmentContainer, employmentTemplate, "employment-block", "employment-title", "Employment History");
+    });
+
+    document.getElementById("addReferenceBtn").addEventListener("click", () => {
+      addBlock(referencesContainer, referenceTemplate, "reference-block", "reference-title", "Reference");
+    });
+
+    document.addEventListener("click", (event) => {
+      const removeButton = event.target.closest(".remove-btn");
+      if (!removeButton) return;
+
+      const block = removeButton.closest(".dynamic-block");
+      if (!block) return;
+
+      const parent = block.parentElement;
+      block.remove();
+
+      if (parent === schoolsContainer) {
+        renumberBlocks(schoolsContainer, "school-block", "school-title", "School");
+        updateRemoveButtons(schoolsContainer);
+      }
+
+      if (parent === employmentContainer) {
+        renumberBlocks(employmentContainer, "employment-block", "employment-title", "Employment History");
+        updateRemoveButtons(employmentContainer);
+      }
+
+      if (parent === referencesContainer) {
+        renumberBlocks(referencesContainer, "reference-block", "reference-title", "Reference");
+        updateRemoveButtons(referencesContainer);
+      }
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      clearStatus();
+
+      if (!validateForm()) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
+
+      const payload = {
+        applicant: {
+          firstName: document.getElementById("firstName").value.trim(),
+          lastName: document.getElementById("lastName").value.trim(),
+          phone: document.getElementById("phone").value.trim(),
+          email: document.getElementById("email").value.trim(),
+          address1: document.getElementById("address1").value.trim(),
+          address2: document.getElementById("address2").value.trim(),
+          city: document.getElementById("city").value.trim(),
+          state: document.getElementById("state").value,
+          zip: document.getElementById("zip").value.trim(),
+          jobPositions: collectJobPositions(),
+          startDate: document.getElementById("startDate").value || "",
+          desiredPay: document.getElementById("desiredPay").value.trim(),
+          availability: document.getElementById("availability").value.trim(),
+          notes: document.getElementById("notes").value.trim()
+        },
+        education: collectSchools(),
+        employmentHistory: collectEmploymentHistory(),
+        references: collectReferences()
+      };
+
+      try {
+        const response = await fetch("/api/apply", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const rawText = await response.text();
+        let result = null;
+
+        try {
+          result = rawText ? JSON.parse(rawText) : null;
+        } catch (parseError) {
+          throw new Error("Form endpoint returned invalid response. Make sure this is being tested on your live Cloudflare Pages site and not by opening the HTML file directly.");
+        }
+
+        if (!response.ok || !result || !result.ok) {
+          throw new Error((result && result.error) || "Unable to submit application.");
+        }
+
+        showStatus("Application submitted successfully. Thank you!", "success");
+        form.reset();
+
+        schoolsContainer.innerHTML = "";
+        employmentContainer.innerHTML = "";
+        referencesContainer.innerHTML = "";
+
+        addBlock(schoolsContainer, schoolTemplate, "school-block", "school-title", "School");
+        addBlock(employmentContainer, employmentTemplate, "employment-block", "employment-title", "Employment History");
+        addBlock(referencesContainer, referenceTemplate, "reference-block", "reference-title", "Reference");
+      } catch (error) {
+        showStatus(error.message || "Something went wrong. Please try again.", "error");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Application";
+      }
+    });
+
+    addBlock(schoolsContainer, schoolTemplate, "school-block", "school-title", "School");
+    addBlock(employmentContainer, employmentTemplate, "employment-block", "employment-title", "Employment History");
+    addBlock(referencesContainer, referenceTemplate, "reference-block", "reference-title", "Reference");
+  </script>
+
+</body>
+</html>

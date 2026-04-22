@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Johnny's Grill & Pizzeria | Full Menu</title>
+  <style>
+    :root{
+      --bg:#0f0f0f;
+      --bg2:#171717;
+      --panel:#1b1b1b;
+      --panel2:#151515;
+      --line:#2a2a2a;
+      --text:#ffffff;
+      --muted:#c6c6c6;
+      --soft:#8e8e8e;
+      --accent:#e11d2e;
+      --accent-hover:#f12638;
+      --yellow:#f1d74f;
+      --max:1320px;
+      --radius:22px;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top, rgba(225,29,46,.14), transparent 30%),
+        radial-gradient(circle at bottom, rgba(255,125,20,.08), transparent 34%),
+        linear-gradient(180deg,#111 0%,#0d0d0d 100%);
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    .container{width:min(var(--max), calc(100% - 32px));margin:0 auto}
+
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background:rgba(15,15,15,.86);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .topbar-inner{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:12px 0;
+      flex-wrap:wrap;
+    }
+    .brand-title{font-size:28px;font-weight:800;line-height:1}
+    .brand-sub{font-size:12px;color:var(--soft);letter-spacing:.16em;text-transform:uppercase;margin-top:6px}
+    .nav-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:0 18px;
+      border-radius:14px;
+      font-size:14px;
+      font-weight:700;
+      transition:.2s ease;
+    }
+    .btn-primary{background:var(--accent);border:1px solid var(--accent);color:#fff}
+    .btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);transform:translateY(-1px)}
+    .btn-secondary{background:transparent;border:1px solid #444;color:#fff}
+    .btn-secondary:hover{background:#1c1c1c;border-color:#666;transform:translateY(-1px)}
+
+    .hero{padding:48px 0 20px}
+    .hero-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01)),linear-gradient(135deg,#1a1a1a,#111);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+    .eyebrow{
+      color:#ff5b67;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    h1{margin:0;font-size:clamp(38px,6vw,64px);line-height:.98;letter-spacing:-.03em}
+    .hero-copy{margin-top:16px;color:var(--muted);line-height:1.7;font-size:17px;max-width:760px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+
+    .toolbar{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .search-box,
+    .filter-box{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;
+      padding:12px 14px;
+      color:#fff;
+      width:100%;
+      min-height:50px;
+      outline:none;
+    }
+    .search-box::placeholder{color:#999}
+    .filter-box{appearance:none;background-color:#171717}
+
+    .jump-wrap{padding:6px 0 18px}
+    .jump-nav{display:flex;gap:10px;flex-wrap:wrap}
+    .jump-nav button{
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+      cursor:pointer;
+    }
+    .jump-nav button:hover,
+    .jump-nav button.active{
+      color:#fff;
+      border-color:rgba(225,29,46,.5);
+      background:rgba(225,29,46,.08);
+    }
+
+    .status-bar{
+      color:var(--soft);
+      font-size:14px;
+      padding-bottom:14px;
+    }
+
+    .section{
+      padding:18px 0 28px;
+    }
+    .section-card{
+      background:linear-gradient(180deg,#191919,#141414);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .section-head{
+      padding:24px 24px 0;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .section-kicker{
+      color:#ff5b67;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    .section-title{
+      margin:0;
+      font-size:clamp(28px,4vw,40px);
+      line-height:1.08;
+    }
+    .count-pill{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:18px;
+      padding:24px;
+    }
+
+    .item{
+      background:linear-gradient(180deg,var(--panel),var(--panel2));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 8px 24px rgba(0,0,0,.18);
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+    }
+
+    .image-wrap{
+      width:100%;
+      background:#111;
+      overflow:hidden;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .image-wrap img{
+      width:100%;
+      height:190px;
+      object-fit:cover;
+    }
+
+    .item-body{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      flex:1;
+    }
+
+    .item-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .item-name{
+      font-size:20px;
+      font-weight:800;
+      line-height:1.15;
+      color:#fff;
+    }
+
+    .item-price{
+      white-space:nowrap;
+      font-size:18px;
+      font-weight:800;
+      color:#fff;
+    }
+
+    .item-desc{
+      color:var(--muted);
+      line-height:1.5;
+      font-size:14px;
+      min-height:42px;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
+    .price-list{
+      margin-top:2px;
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:10px;
+      display:flex;
+      flex-direction:column;
+      gap:7px;
+    }
+
+    .price-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+      font-size:13px;
+      color:#e7e7e7;
+    }
+
+    .price-row-label{
+      color:var(--muted);
+      line-height:1.35;
+    }
+
+    .price-row-value{
+      white-space:nowrap;
+      font-weight:700;
+      color:#fff;
+    }
+
+    .item-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:auto;
+      padding-top:4px;
+    }
+
+    .badge{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      border-radius:999px;
+      padding:7px 11px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .badge-custom{
+      border-color:rgba(241,215,79,.24);
+      color:#f3df78;
+      background:rgba(241,215,79,.08);
+    }
+
+    .empty-state{
+      padding:30px 24px 26px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .order-bar{
+      position:sticky;
+      bottom:0;
+      z-index:40;
+      background:rgba(12,12,12,.94);
+      border-top:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(10px);
+      margin-top:18px;
+    }
+    .order-bar-inner{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      padding:12px 0;
+    }
+    .order-copy{color:var(--muted);font-size:14px}
+
+    .loading{
+      padding:50px 24px;
+      text-align:center;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    @media (max-width:1180px){
+      .menu-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    }
+
+    @media (max-width:980px){
+      .toolbar{grid-template-columns:1fr}
+      .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    @media (max-width:720px){
+      .topbar-inner{flex-direction:column;align-items:flex-start}
+      .brand-title{font-size:24px}
+      .hero{padding-top:34px}
+      .hero-card{padding:22px}
+      .section-head{padding:20px 20px 0}
+      .menu-grid{padding:20px;grid-template-columns:1fr}
+      .item-name{font-size:18px}
+      .item-price{font-size:16px}
+      .image-wrap img{height:180px}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div>
+        <div class="brand-title">
+          <a href="/">Johnny's Grill &amp; Pizzeria</a>
+        </div>
+        <div class="brand-sub">Newbury, Ohio • Pizza • Breakfast • Catering</div>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="/" target="_top">Home</a>
+        <a class="btn btn-secondary" href="/menu" target="_top">Menu</a>
+        <a class="btn btn-secondary" href="/about" target="_top">About</a>
+        <a class="btn btn-secondary" href="/employment" target="_top">Employment</a>
+        <a class="btn btn-secondary" href="https://deals.spoton.com/682b7aca501c6df83e06a58a/join-loyalty?utm_medium=link" target="_blank">Loyalty</a>
+        <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="eyebrow">Full Menu</div>
+          <h1>Browse Johnny's Full Menu Anytime</h1>
+          <div class="hero-copy">
+            Explore Johnny's full menu, check pricing anytime, and order online when you're ready.
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Start Online Order</a>
+            <a class="btn btn-secondary" href="#menu-app">Jump to Menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu-app" class="section">
+      <div class="container">
+        <div class="toolbar">
+          <input id="searchBox" class="search-box" type="text" placeholder="Search menu items..." />
+          <select id="categoryFilter" class="filter-box">
+            <option value="all">All Categories</option>
+          </select>
+        </div>
+
+        <div id="jumpNav" class="jump-wrap">
+          <div class="jump-nav" id="jumpButtons"></div>
+        </div>
+
+        <div class="status-bar" id="statusBar">Loading menu...</div>
+
+        <div id="menuRoot" class="loading">Loading menu...</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="order-bar">
+    <div class="container order-bar-inner">
+      <div class="order-copy">Browse the menu, check pricing, and order online anytime.</div>
+      <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
+    </div>
+  </div>
+
+  <script>
+    const MENU_JSON_PATH = '/data/menu.json';
+
+    let MENU_DATA = [];
+    let CATEGORY_MAP = {};
+    let ACTIVE_CATEGORY = 'all';
+    let SEARCH_TERM = '';
+
+    const FALLBACK_CATEGORY_KEYWORDS = {
+      'Appetizers': ['fries','tots','wedges','rings','mushrooms','pickles','loaded fries','loaded tots','poppers','garlic bites','skins','zucchini','pretzel','hot dog','dog','quesadilla','chicken strip basket','meatball appetizer'],
+      'Beverages': ['fountain drink','bottle water','gatorade','jarrito','coffee','juice','drink','milkshake','root beer float','pepsi','mountain dew','dr pepper','sprite','cocacola','coca cola','lemonade'],
+      'Breakfast': ['breakfast','omelet','omlet','egg','toast','waffle','french toast','bagel','hash','biscuit','gravy','sunshine','pancake'],
+      'Burgers': ['burger','melt','johnny boy','western burger','cajun burger','cheeseburger'],
+      'Catering': ['catering','pan ','whole pan','sub platter','50 wings','20 mozz','20 pepperoni rolls'],
+      'Desserts': ['cheesecake','truffle','dessert','cookie dough','blueberry cobbler','pie'],
+      'Fish': ['fish','shrimp basket'],
+      'Flat Breads': ['flat bread','flatbread'],
+      'Fried Chicken & Ribs': ['fried chicken','ribs'],
+      'Gyro': ['gyro'],
+      'Ice Cream': ['pint','quart','ice cream','cone'],
+      'Kids Meals': ['kids '],
+      'Meal Deals': ['meal deals'],
+      'Pastas': ['pasta','alfredo','scampi','spaghetti','lasagna','parm pasta'],
+      'Pierogies': ['pierog'],
+      'Pizza': ['pizza','6 cut','8 cut','12 cut','16 cut','full sheet','half sheet','gluten free','calzone'],
+      'Reuben': ['reuben','corned beef','turkey reuben','ruben'],
+      'Salads': ['salad'],
+      'Sides': ['side ','chips','coleslaw','mac n cheese','baked potato','brocoli','broccoli'],
+      'Soup': ['soup'],
+      'Subs / Wraps': ['sub','wrap','club','philly','grilled cheese','cuban','blt','sandwich','sandwhich','hoagie'],
+      'Weekly Specials': ['special'],
+      'Wings': [' wings','24 wings','18 wings','6 wings','12 wings']
+    };
+
+    const PRICE_LEVEL_WORDS = [
+      'small','medium','large','regular','size',
+      '6 cut','8 cut','12 cut','16 cut',
+      'half sheet','full sheet','sheet',
+      'gluten free','calzone',
+      '2 piece','3 piece','4 piece','5 piece','6 piece','8 piece','10 piece','12 piece','16 piece','20 piece','24 piece','50 piece',
+      '16 oz','20 oz','32 oz','oz','pint','quart','cup','bowl'
+    ];
+
+    const HIDE_GROUP_WORDS = [
+      'dressings','dressing',
+      'salad toppings',
+      'wing sauces','wing sauce','sauces','sauce',
+      'toppings','extras','extra'
+    ];
+
+    const HIDE_MODIFIER_WORDS = [
+      'no ','extra ','add ','1st','2nd','dbl',
+      'ranch','italian','blue cheese','red french','balsamic',
+      'lettuce','tomato','tomatos','onion','onions','banana peppers',
+      'green peppers','pickles','relish','kraut','mild','hot','bbq','garlic'
+    ];
+
+    function cleanText(value) {
+      return String(value || '').replace(/\s+/g, ' ').trim();
+    }
+
+    function slugify(value) {
+      return cleanText(value).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    }
+
+    function toNumber(value) {
+      const num = Number(value || 0);
+      return Number.isFinite(num) ? num : 0;
+    }
+
+    function formatPrice(value) {
+      return '$' + toNumber(value).toFixed(2);
+    }
+
+    function getImage(item) {
+      return cleanText(item.imageUrl || '');
+    }
+
+    function getSearchHaystack(item) {
+      return [
+        cleanText(item.name),
+        cleanText(item.description),
+        ...(Array.isArray(item.subItems) ? item.subItems.map(g => cleanText(g.name)) : []),
+        ...(Array.isArray(item.modifiers) ? item.modifiers.map(g => cleanText(g.name)) : [])
+      ].join(' ').toLowerCase();
+    }
+
+    function hasWord(text, word) {
+      return text.includes(word.toLowerCase());
+    }
+
+    function looksLikePizza(item) {
+      const text = getSearchHaystack(item);
+      if (hasWord(text, 'pizza')) return true;
+      if (PRICE_LEVEL_WORDS.some(w => ['6 cut','8 cut','12 cut','16 cut','half sheet','full sheet','calzone','gluten free'].includes(w) && hasWord(text, w))) return true;
+
+      const subGroups = Array.isArray(item.subItems) ? item.subItems : [];
+      for (const group of subGroups) {
+        const groupName = cleanText(group.name).toLowerCase();
+        if (groupName.includes('pizza')) return true;
+        const items = Array.isArray(group.items) ? group.items : [];
+        for (const sub of items) {
+          const subName = cleanText(sub.name).toLowerCase();
+          if (subName.includes('cut') || subName.includes('sheet') || subName.includes('calzone') || subName.includes('gluten free')) {
+            return true;
+          }
+        }
+      }
+
+      return false;
+    }
+
+    function inferCategory(item) {
+      const name = cleanText(item.name).toLowerCase();
+      const desc = cleanText(item.description).toLowerCase();
+      const hay = getSearchHaystack(item);
+
+      if (name.includes('salad')) return 'Salads';
+      if (looksLikePizza(item)) return 'Pizza';
+      if (name.includes('wings') || hay.includes(' wings')) return 'Wings';
+      if (name.includes('soup')) return 'Soup';
+      if (name.includes('gyro') && !name.includes('salad')) return 'Gyro';
+      if ((name.includes('reuben') || name.includes('ruben')) && !looksLikePizza(item)) return 'Reuben';
+      if ((name.includes('sub') || name.includes('wrap') || name.includes('club') || name.includes('cuban') || name.includes('blt') || name.includes('philly')) && !looksLikePizza(item)) return 'Subs / Wraps';
+      if (name.includes('burger') || name.includes('cheeseburger')) return 'Burgers';
+      if (name.includes('fountain drink') || name.includes('jarrito') || name.includes('gatorade') || name.includes('coffee') || name.includes('pepsi') || name.includes('sprite') || name.includes('coke') || name.includes('lemonade')) return 'Beverages';
+
+      for (const [category, keywords] of Object.entries(FALLBACK_CATEGORY_KEYWORDS)) {
+        if (keywords.some(keyword => hay.includes(keyword.toLowerCase()))) {
+          return category;
+        }
+      }
+
+      return 'Other';
+    }
+
+    function itemMatches(item) {
+      const category = inferCategory(item);
+      if (ACTIVE_CATEGORY !== 'all' && category !== ACTIVE_CATEGORY) return false;
+
+      if (!SEARCH_TERM) return true;
+
+      const hay = JSON.stringify(item).toLowerCase();
+      return hay.includes(SEARCH_TERM);
+    }
+
+    function buildCategoryMap(items) {
+      const map = {};
+
+      items.forEach(item => {
+        const cat = inferCategory(item);
+        if (!map[cat]) map[cat] = [];
+        map[cat].push(item);
+      });
+
+      Object.keys(map).forEach(cat => {
+        map[cat].sort((a, b) => {
+          const posA = toNumber(a.position);
+          const posB = toNumber(b.position);
+          if (posA !== posB) return posA - posB;
+          return cleanText(a.name).localeCompare(cleanText(b.name));
+        });
+      });
+
+      return map;
+    }
+
+    function isPriceLevelLabel(text) {
+      const value = cleanText(text).toLowerCase();
+      if (!value) return false;
+      return PRICE_LEVEL_WORDS.some(word => value.includes(word));
+    }
+
+    function isHiddenGroupName(text) {
+      const value = cleanText(text).toLowerCase();
+      if (!value) return false;
+      return HIDE_GROUP_WORDS.some(word => value.includes(word));
+    }
+
+    function isHiddenModifierName(text) {
+      const value = cleanText(text).toLowerCase();
+      if (!value) return false;
+      return HIDE_MODIFIER_WORDS.some(word => value.includes(word));
+    }
+
+    function uniqueRows(rows) {
+      const seen = new Set();
+      return rows.filter(row => {
+        const key = `${row.label}|||${row.price}`;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+
+    function extractSubItemPriceRows(item) {
+      const rows = [];
+      const groups = Array.isArray(item.subItems) ? item.subItems : [];
+
+      groups.forEach(group => {
+        const groupName = cleanText(group.name);
+        const items = Array.isArray(group.items) ? group.items : [];
+        items.forEach(sub => {
+          const price = toNumber(sub.price);
+          if (price > 0) {
+            rows.push({
+              label: cleanText(sub.name) || groupName || 'Option',
+              price
+            });
+          }
+        });
+      });
+
+      return uniqueRows(rows);
+    }
+
+    function extractModifierPriceRows(item) {
+      const rows = [];
+      const groups = Array.isArray(item.modifiers) ? item.modifiers : [];
+
+      groups.forEach(group => {
+        const groupName = cleanText(group.name);
+        const mods = Array.isArray(group.modifiers) ? group.modifiers : [];
+
+        mods.forEach(mod => {
+          const modName = cleanText(mod.name);
+          const options = Array.isArray(mod.options) ? mod.options : [];
+
+          options.forEach(opt => {
+            const optionName = cleanText(opt.name);
+            const price = toNumber(opt.price);
+
+            if (price <= 0) return;
+            if (isHiddenGroupName(groupName)) return;
+            if (isHiddenModifierName(modName)) return;
+
+            const isLikelyPriceLevel =
+              isPriceLevelLabel(groupName) ||
+              isPriceLevelLabel(modName) ||
+              isPriceLevelLabel(optionName);
+
+            if (!isLikelyPriceLevel) return;
+
+            let label = modName;
+            if (optionName && !/^add to order$/i.test(optionName) && !/^add$/i.test(optionName)) {
+              label = `${modName} ${optionName}`.trim();
+            }
+
+            rows.push({
+              label: label || groupName || 'Option',
+              price
+            });
+          });
+        });
+      });
+
+      return uniqueRows(rows);
+    }
+
+    function getBasePrice(item) {
+      return toNumber(item.price);
+    }
+
+    function isPriceLevelItem(item) {
+      if (getBasePrice(item) > 0) return false;
+      if (extractSubItemPriceRows(item).length) return true;
+      if (extractModifierPriceRows(item).length) return true;
+      return false;
+    }
+
+    function hasCustomization(item) {
+      const groups = Array.isArray(item.modifiers) ? item.modifiers : [];
+      return groups.length > 0;
+    }
+
+    function createPriceRowsHtml(rows) {
+      if (!rows.length) return '';
+      return `
+        <div class="price-list">
+          ${rows.map(row => `
+            <div class="price-row">
+              <div class="price-row-label">${row.label}</div>
+              <div class="price-row-value">${formatPrice(row.price)}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function createItemCard(item) {
+      const name = cleanText(item.name || 'Item');
+      const desc = cleanText(item.description || '');
+      const image = getImage(item);
+      const basePrice = getBasePrice(item);
+      const subRows = extractSubItemPriceRows(item);
+      const modRows = extractModifierPriceRows(item);
+      const priceLevelItem = isPriceLevelItem(item);
+
+      let priceHtml = '';
+      let rowsHtml = '';
+
+      if (basePrice > 0) {
+        priceHtml = `<div class="item-price">${formatPrice(basePrice)}</div>`;
+      } else if (subRows.length) {
+        rowsHtml = createPriceRowsHtml(subRows);
+      } else if (modRows.length) {
+        rowsHtml = createPriceRowsHtml(modRows);
+      }
+
+      return `
+        <article class="item">
+          ${image ? `
+            <div class="image-wrap">
+              <img src="${image}" alt="${name}">
+            </div>
+          ` : ''}
+
+          <div class="item-body">
+            <div class="item-top">
+              <div class="item-name">${name}</div>
+              ${priceHtml}
+            </div>
+
+            ${desc ? `<div class="item-desc">${desc}</div>` : `<div class="item-desc"></div>`}
+
+            ${rowsHtml}
+
+            <div class="item-meta">
+              ${priceLevelItem ? `<span class="badge badge-custom">Choose Price Option</span>` : ''}
+              ${hasCustomization(item) && !priceLevelItem ? `<span class="badge badge-custom">Customizable</span>` : ''}
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderJumpButtons(categoryNames) {
+      const wrap = document.getElementById('jumpButtons');
+      wrap.innerHTML = `
+        <button class="${ACTIVE_CATEGORY === 'all' ? 'active' : ''}" data-category="all">All</button>
+        ${categoryNames.map(cat => `
+          <button class="${ACTIVE_CATEGORY === cat ? 'active' : ''}" data-category="${cat}">${cat}</button>
+        `).join('')}
+      `;
+
+      wrap.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          ACTIVE_CATEGORY = btn.dataset.category;
+          document.getElementById('categoryFilter').value = ACTIVE_CATEGORY;
+          renderMenu();
+        });
+      });
+    }
+
+    function renderCategoryFilter(categoryNames) {
+      const select = document.getElementById('categoryFilter');
+      select.innerHTML = `
+        <option value="all">All Categories</option>
+        ${categoryNames.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
+      `;
+      select.value = ACTIVE_CATEGORY;
+    }
+
+    function renderMenu() {
+      const root = document.getElementById('menuRoot');
+      const statusBar = document.getElementById('statusBar');
+
+      const categoryNames = Object.keys(CATEGORY_MAP).sort((a, b) => a.localeCompare(b));
+      renderJumpButtons(categoryNames);
+      renderCategoryFilter(categoryNames);
+
+      const visibleCategories = {};
+      let totalVisible = 0;
+
+      categoryNames.forEach(cat => {
+        const items = CATEGORY_MAP[cat].filter(itemMatches);
+        if (items.length) {
+          visibleCategories[cat] = items;
+          totalVisible += items.length;
+        }
+      });
+
+      statusBar.textContent = `${totalVisible} item${totalVisible === 1 ? '' : 's'} shown`;
+
+      if (!totalVisible) {
+        root.innerHTML = `
+          <div class="section-card">
+            <div class="empty-state">No menu items matched your search.</div>
+          </div>
+        `;
+        return;
+      }
+
+      root.innerHTML = Object.entries(visibleCategories).map(([category, items]) => {
+        const id = `cat-${slugify(category)}`;
+        return `
+          <section class="section" id="${id}">
+            <div class="section-card">
+              <div class="section-head">
+                <div>
+                  <div class="section-kicker">Menu Category</div>
+                  <h2 class="section-title">${category}</h2>
+                </div>
+                <div class="count-pill">${items.length} item${items.length === 1 ? '' : 's'}</div>
+              </div>
+              <div class="menu-grid">
+                ${items.map(createItemCard).join('')}
+              </div>
+            </div>
+          </section>
+        `;
+      }).join('');
+    }
+
+    async function initMenu() {
+      const root = document.getElementById('menuRoot');
+      const statusBar = document.getElementById('statusBar');
+
+      try {
+        const res = await fetch(MENU_JSON_PATH, { cache: 'no-store' });
+        if (!res.ok) {
+          throw new Error(`Failed to load menu.json (${res.status})`);
+        }
+
+        MENU_DATA = await res.json();
+        CATEGORY_MAP = buildCategoryMap(MENU_DATA);
+
+        document.getElementById('searchBox').addEventListener('input', (e) => {
+          SEARCH_TERM = e.target.value.trim().toLowerCase();
+          renderMenu();
+        });
+
+        document.getElementById('categoryFilter').addEventListener('change', (e) => {
+          ACTIVE_CATEGORY = e.target.value;
+          renderMenu();
+        });
+
+        renderMenu();
+      } catch (err) {
+        console.error(err);
+        statusBar.textContent = 'Menu failed to load';
+        root.innerHTML = `
+          <div class="section-card">
+            <div class="empty-state">
+              Could not load the menu data. Make sure the file exists at <strong>/data/menu.json</strong>.
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    initMenu();
+  </script>
+</body>
+</html>
