@@ -1905,6 +1905,14 @@
           "$2.81",
           ""
         ]
+      ],
+      [
+        "r",
+        [
+          "Starbucks Dark Caramel Tripleshot Energy",
+          "$4.16",
+          " · Currently Unavailable"
+        ]
       ]
     ]
   },
@@ -1914,9 +1922,73 @@
       [
         "r",
         [
+          "Blueberry Cheesecake Slice",
+          "$5.20",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
           "Blueberry Cobbler White Chocolate Cheesecake",
           "$5.72",
           "Creamy white chocolate cheesecake with swirls of blueberries topped with white chocolate shavings"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Blueberry Creme Brulee Cheesecake",
+          "$6.24",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Brownie Swirl Cheesecake Slice",
+          "$5.20",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Bumbleberry Cheesecake",
+          "$5.72",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Cheesecake Truffles",
+          "$8.01",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chocolate Bundt Cake",
+          "$5.20",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chocolate Cheesecake Slice",
+          "$3.64",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Cinnamon Bites",
+          "$5.20",
+          " · Currently Unavailable"
         ]
       ],
       [
@@ -1946,6 +2018,14 @@
       [
         "r",
         [
+          "New York Cheesecake",
+          "$6.24",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
           "Oreo Cookie Crazy Cheesecake",
           "$6.24",
           " · Currently Unavailable"
@@ -1954,9 +2034,57 @@
       [
         "r",
         [
+          "Pumpkin Praline Cheesecake",
+          "$6.24",
+          "New York Style Cheesecake with Pumpkin Spice Topped with Praline Pecans · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Raspberry White Chocolate Cheesecake Slice",
+          "$3.64",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Strawberry Swirl Cheesecake Slice",
+          "$3.64",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Triple Berry Mascato Tiramisu",
+          "$7.28",
+          "This lighter version of tiramisu cake pairs regional sweet raspberries with mascarpone cheese and tender genoise soaked in Moscato wine essence and Madagascar vanilla. · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
           "Truffle Bomb",
           "$5.72",
           ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Turtle Cheesecake Slice",
+          "$3.64",
+          " · Currently Unavailable"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Tuxedo Bomb",
+          "$5.72",
+          " · Currently Unavailable"
         ]
       ]
     ]
