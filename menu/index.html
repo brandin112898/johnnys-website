@@ -1,3 +1,484 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Menu | Johnny’s Grill & Pizzeria</title><meta name="description" content="Explore Johnny’s Grill & Pizzeria’s menu and order carryout or delivery in Newbury Township, Ohio."><link rel="stylesheet" href="/menu/menu.css"></head>
-<body><header><a class="brand" href="/">Johnny’s <small>GRILL & PIZZERIA</small></a><nav><a href="/about/">Our story</a><a class="button" href="https://order.spoton.com/BL-5D92-8C70-BB34">Order online ↗</a></nav></header><main><div class="intro"><p class="eyebrow">NEWBURY TOWNSHIP, OHIO</p><h1>Find your next favorite.</h1><p>Pizza night. A quick lunch. Dinner for the whole crew.</p><p class="detail">Browse the menu here, then customize and pay through Johnny’s official SpotOn ordering. Ordering hours, options, and final prices are confirmed at checkout.</p></div><div id="status" role="status">Checking the menu…</div><section id="fallback" hidden><h2>The freshest menu is one tap away.</h2><p>Open Johnny’s online ordering for current items, prices, and availability. If ordering is unavailable, give us a call.</p><div class="actions"><a class="button" href="https://order.spoton.com/BL-5D92-8C70-BB34">View menu & order ↗</a><a class="secondary" href="tel:+14405641331">Call (440) 564-1331</a><button id="retry" class="secondary">Refresh menu</button></div></section><div id="catalog" hidden><label class="search">Find a favorite<input type="search" id="search" placeholder="Search the menu" autocomplete="off"></label><nav id="categories" aria-label="Menu categories"></nav><div id="items"></div></div><noscript><p>For the current menu, <a href="https://order.spoton.com/BL-5D92-8C70-BB34">open Johnny’s online ordering</a> or call (440) 564-1331.</p></noscript></main><footer><span>Johnny’s Grill & Pizzeria</span><a href="/">Back to home</a><a href="tel:+14405641331">(440) 564-1331</a></footer><script src="/menu/menu.js" defer></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Full Menu | Best Pizza, Wings, Burgers in Newbury OH | Johnny's Grill & Pizzeria</title>
+
+<meta name="description" content="Full menu for Johnny's Grill & Pizzeria in Newbury Township, Ohio. Pizza, wings, burgers, gyros, subs, breakfast and more. Order online or call 440-564-1331.">
+<meta name="keywords" content="pizza menu Newbury OH, wings Newbury Ohio, burgers Newbury Township, food near me, restaurant menu Newbury Ohio, best pizza near me">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Johnny's Grill & Pizzeria">
+
+<!-- GEO -->
+<meta name="geo.region" content="US-OH">
+<meta name="geo.placename" content="Newbury Township, Ohio">
+<meta name="geo.position" content="41.4623;-81.2415">
+<meta name="ICBM" content="41.4623, -81.2415">
+
+<!-- APPLE -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Johnny's Menu">
+<link rel="apple-touch-icon" href="https://johnnyspizzaandgrill.com/logo-social.jpg">
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="Johnny's Grill & Pizzeria Full Menu">
+<meta property="og:description" content="Browse our full menu with pizza, wings, burgers, gyros, and more.">
+<meta property="og:image" content="https://johnnyspizzaandgrill.com/logo-social.jpg">
+<meta property="og:image:secure_url" content="https://johnnyspizzaandgrill.com/logo-social.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://johnnyspizzaandgrill.com/menu">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Johnny's Grill & Pizzeria">
+
+<!-- FORCE IMAGE -->
+<meta property="og:image" content="https://johnnyspizzaandgrill.com/logo-social.jpg">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Johnny's Grill & Pizzeria Menu">
+<meta name="twitter:description" content="Full menu available anytime.">
+<meta name="twitter:image" content="https://johnnyspizzaandgrill.com/logo-social.jpg">
+
+<!-- ICON -->
+<link rel="icon" href="https://johnnyspizzaandgrill.com/logo-social.jpg" type="image/jpeg">
+
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Johnny's Grill & Pizzeria",
+  "image": "https://johnnyspizzaandgrill.com/logo-social.jpg",
+  "telephone": "+1-440-564-1331",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Newbury Township",
+    "addressRegion": "OH",
+    "postalCode": "44065",
+    "addressCountry": "US"
+  },
+  "servesCuisine": ["Pizza","American","Burgers","Wings","Breakfast"],
+  "hasMenu": "https://johnnyspizzaandgrill.com/menu",
+  "url": "https://johnnyspizzaandgrill.com/"
+}
+</script>
+
+  <!-- ORIGINAL CSS (UNCHANGED) -->
+  <style>
+    :root{
+      --bg:#0f0f0f;
+      --bg2:#171717;
+      --panel:#1b1b1b;
+      --panel2:#151515;
+      --line:#2a2a2a;
+      --text:#ffffff;
+      --muted:#c6c6c6;
+      --soft:#8e8e8e;
+      --accent:#e11d2e;
+      --accent-hover:#f12638;
+      --yellow:#f1d74f;
+      --max:1320px;
+      --radius:22px;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top, rgba(225,29,46,.14), transparent 30%),
+        radial-gradient(circle at bottom, rgba(255,125,20,.08), transparent 34%),
+        linear-gradient(180deg,#111 0%,#0d0d0d 100%);
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    .container{width:min(var(--max), calc(100% - 32px));margin:0 auto}
+
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background:rgba(15,15,15,.86);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .topbar-inner{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:12px 0;
+      flex-wrap:wrap;
+    }
+    .brand-title{font-size:28px;font-weight:800;line-height:1}
+    .brand-sub{font-size:12px;color:var(--soft);letter-spacing:.16em;text-transform:uppercase;margin-top:6px}
+    .nav-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:0 18px;
+      border-radius:14px;
+      font-size:14px;
+      font-weight:700;
+      transition:.2s ease;
+    }
+    .btn-primary{background:var(--accent);border:1px solid var(--accent);color:#fff}
+    .btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);transform:translateY(-1px)}
+    .btn-secondary{background:transparent;border:1px solid #444;color:#fff}
+    .btn-secondary:hover{background:#1c1c1c;border-color:#666;transform:translateY(-1px)}
+
+    .hero{padding:48px 0 20px}
+    .hero-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01)),linear-gradient(135deg,#1a1a1a,#111);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+    .eyebrow{
+      color:#ff5b67;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    h1{margin:0;font-size:clamp(38px,6vw,64px);line-height:.98;letter-spacing:-.03em}
+    .hero-copy{margin-top:16px;color:var(--muted);line-height:1.7;font-size:17px;max-width:760px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+
+    .toolbar{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .search-box,
+    .filter-box{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;
+      padding:12px 14px;
+      color:#fff;
+      width:100%;
+      min-height:50px;
+      outline:none;
+    }
+    .search-box::placeholder{color:#999}
+    .filter-box{appearance:none;background-color:#171717}
+
+    .jump-wrap{padding:6px 0 18px}
+    .jump-nav{display:flex;gap:10px;flex-wrap:wrap}
+    .jump-nav button{
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+      cursor:pointer;
+    }
+    .jump-nav button:hover,
+    .jump-nav button.active{
+      color:#fff;
+      border-color:rgba(225,29,46,.5);
+      background:rgba(225,29,46,.08);
+    }
+
+    .status-bar{
+      color:var(--soft);
+      font-size:14px;
+      padding-bottom:14px;
+    }
+
+    .section{
+      padding:18px 0 28px;
+    }
+    .section-card{
+      background:linear-gradient(180deg,#191919,#141414);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .section-head{
+      padding:24px 24px 0;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .section-kicker{
+      color:#ff5b67;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    .section-title{
+      margin:0;
+      font-size:clamp(28px,4vw,40px);
+      line-height:1.08;
+    }
+    .count-pill{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:18px;
+      padding:24px;
+    }
+
+    .item{
+      background:linear-gradient(180deg,var(--panel),var(--panel2));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 8px 24px rgba(0,0,0,.18);
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+    }
+
+    .image-wrap{
+      width:100%;
+      background:#111;
+      overflow:hidden;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .image-wrap img{
+      width:100%;
+      height:190px;
+      object-fit:cover;
+    }
+
+    .item-body{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      flex:1;
+    }
+
+    .item-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .item-name{
+      font-size:20px;
+      font-weight:800;
+      line-height:1.15;
+      color:#fff;
+    }
+
+    .item-price{
+      white-space:nowrap;
+      font-size:18px;
+      font-weight:800;
+      color:#fff;
+    }
+
+    .item-desc{
+      color:var(--muted);
+      line-height:1.5;
+      font-size:14px;
+      min-height:42px;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
+    .price-list{
+      margin-top:2px;
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:10px;
+      display:flex;
+      flex-direction:column;
+      gap:7px;
+    }
+
+    .price-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+      font-size:13px;
+      color:#e7e7e7;
+    }
+
+    .price-row-label{
+      color:var(--muted);
+      line-height:1.35;
+    }
+
+    .price-row-value{
+      white-space:nowrap;
+      font-weight:700;
+      color:#fff;
+    }
+
+    .item-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:auto;
+      padding-top:4px;
+    }
+
+    .badge{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      border-radius:999px;
+      padding:7px 11px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .badge-custom{
+      border-color:rgba(241,215,79,.24);
+      color:#f3df78;
+      background:rgba(241,215,79,.08);
+    }
+
+    .empty-state{
+      padding:30px 24px 26px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .order-bar{
+      position:sticky;
+      bottom:0;
+      z-index:40;
+      background:rgba(12,12,12,.94);
+      border-top:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(10px);
+      margin-top:18px;
+    }
+    .order-bar-inner{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      padding:12px 0;
+    }
+    .order-copy{color:var(--muted);font-size:14px}
+
+    .loading{
+      padding:50px 24px;
+      text-align:center;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    @media (max-width:1180px){
+      .menu-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    }
+
+    @media (max-width:980px){
+      .toolbar{grid-template-columns:1fr}
+      .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    @media (max-width:720px){
+      .topbar-inner{flex-direction:column;align-items:flex-start}
+      .brand-title{font-size:24px}
+      .hero{padding-top:34px}
+      .hero-card{padding:22px}
+      .section-head{padding:20px 20px 0}
+      .menu-grid{padding:20px;grid-template-columns:1fr}
+      .item-name{font-size:18px}
+      .item-price{font-size:16px}
+      .image-wrap img{height:180px}
+    }
+  
+.food-menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}.food-section{padding:26px}.food-section[hidden]{display:none}.food-section h2{font-size:25px;color:#f06459;border-bottom:1px solid #66362f;padding-bottom:12px;margin:0 0 15px}.food-row{padding:13px 0;border-bottom:1px solid #343434}.food-line{display:flex;justify-content:space-between;gap:20px;align-items:baseline;flex-wrap:wrap}.food-line h3{font-size:17px;color:#d8b453;margin:0;flex:1;min-width:150px;line-height:1.45}.food-price{font-size:16px;font-weight:700;color:#fff;line-height:1.65;font-variant-numeric:tabular-nums}.food-row p,.menu-note{color:#c6c6c6;line-height:1.65;font-size:15px;margin:8px 0}.menu-advisory{line-height:1.6;color:#ddd;margin-top:28px;font-size:14px}.toolbar label{color:#ddd;font-size:14px;display:grid;gap:8px}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:12px 8px;border-bottom:1px solid #343434}thead th{color:#d8b453}.food-section th{white-space:nowrap}#noResults{padding:25px}@media(max-width:800px){.topbar{position:static}.food-menu{grid-template-columns:1fr}.food-section{padding:20px}.food-line{gap:6px 16px}.food-price{max-width:100%}}
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div>
+        <div class="brand-title">
+          <a href="/">Johnny's Grill &amp; Pizzeria</a>
+        </div>
+        <div class="brand-sub">Newbury, Ohio • Pizza • Breakfast • Catering</div>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="/" target="_top">Home</a>
+        <a class="btn btn-secondary" href="/menu" target="_top">Menu</a>
+        <a class="btn btn-secondary" href="/about" target="_top">About</a>
+        <a class="btn btn-secondary" href="/employment" target="_top">Employment</a>
+        <a class="btn btn-secondary" href="https://deals.spoton.com/682b7aca501c6df83e06a58a/join-loyalty?utm_medium=link" target="_blank">Loyalty</a>
+        <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="eyebrow">Full Menu</div>
+          <h1>Browse Johnny's Full Menu Anytime</h1>
+          <div class="hero-copy">
+            Explore Johnny's full menu, check pricing anytime, and order online when you're ready.
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Start Online Order</a>
+            <a class="btn btn-secondary" href="/menu/johnnys-takeout-menu.pdf" target="_blank" rel="noopener">View / Download Takeout Menu (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu-app" class="section">
+      <div class="container">
+        <div class="toolbar"><label>Search The Menu<input id="searchBox" class="search-box" type="search" placeholder="Search Menu Items" /></label><label>Category<select id="categoryFilter" class="filter-box"><option value="all">All Categories</option><option value="Breakfast 8 AM - 3:30 PM">Breakfast 8 AM - 3:30 PM</option><option value="Omelets">Omelets</option><option value="Breakfast Sandwiches">Breakfast Sandwiches</option><option value="Breakfast Sides">Breakfast Sides</option><option value="Build Your Own Pizza">Build Your Own Pizza</option><option value="Topping Prices">Topping Prices</option><option value="Specialty Pizzas">Specialty Pizzas</option><option value="Sheet Pizzas">Sheet Pizzas</option><option value="Calzones">Calzones</option><option value="Flatbreads">Flatbreads</option><option value="Subs &amp; Wraps">Subs &amp; Wraps</option><option value="Gyros">Gyros</option><option value="Corned Beef &amp; Reubens">Corned Beef &amp; Reubens</option><option value="Burgers">Burgers</option><option value="Hot Dogs">Hot Dogs</option><option value="Salads">Salads</option><option value="Johnny&#x27;s Signature Pastas">Johnny&#x27;s Signature Pastas</option><option value="Fish &amp; Seafood">Fish &amp; Seafood</option><option value="Fish Subs &amp; Wraps">Fish Subs &amp; Wraps</option><option value="Fried Chicken Dinners &amp; Ribs">Fried Chicken Dinners &amp; Ribs</option><option value="Chicken Wings">Chicken Wings</option><option value="Kids Meals">Kids Meals</option><option value="Pierogies">Pierogies</option><option value="Plain Potato &amp; Cheese Pierogies">Plain Potato &amp; Cheese Pierogies</option><option value="Appetizers">Appetizers</option><option value="Cheese Bread">Cheese Bread</option><option value="Sides &amp; Chili">Sides &amp; Chili</option><option value="South Of The Border">South Of The Border</option></select></label></div><div id="statusBar" class="status-bar" role="status"></div><div id="menuRoot" class="food-menu"><section class="section-card food-section" id="food-0" data-category="Breakfast 8 AM - 3:30 PM"><h2>Breakfast 8 AM - 3:30 PM</h2><article class="food-row"><div class="food-line"><h3>Johnny’s Sunshine*</h3><span class="food-price">$11.44</span></div><p>2 Eggs, Toast, Choice Of Meat &amp; Potato</p></article><article class="food-row"><div class="food-line"><h3>Country Fried Steak*</h3><span class="food-price">$13.52</span></div><p>2 Eggs, Potato, Biscuit &amp; Sausage Gravy</p></article><article class="food-row"><div class="food-line"><h3>Supreme Breakfast Bowl</h3><span class="food-price">$11.44</span></div><p>Ham, Sausage, Bacon, Onion, Peppers, Tomato, Scrambled Eggs, Home Fries, Cheese &amp; Gravy; Toast</p></article><article class="food-row"><div class="food-line"><h3>Breakfast Burrito</h3><span class="food-price">$10.40</span></div><p>Ham, Sausage, Bacon, Onion, Peppers, Tomato, Scrambled Eggs, American Cheese &amp; Home Fries Inside</p></article><article class="food-row"><div class="food-line"><h3>Biscuits &amp; Gravy</h3><span class="food-price">$7.28</span></div><p>2 Biscuits With Sausage Gravy</p></article><article class="food-row"><div class="food-line"><h3>Biscuits &amp; Gravy Meal*</h3><span class="food-price">$12.48</span></div><p>2 Biscuits, Sausage Gravy, 2 Eggs &amp; Potato</p></article></section><section class="section-card food-section" id="food-1" data-category="Omelets"><h2>Omelets</h2><p class="menu-note">With Choice Of Potato &amp; Toast</p><article class="food-row"><div class="food-line"><h3>Build Your Own Omelet</h3><span class="food-price">$11.44</span></div><p>American, Cheddar, Swiss, Provolone Or Pepper Jack; Ham, Bacon Or Sausage; Up To 3 Veggies. Extra Meat +$1.56</p></article><article class="food-row"><div class="food-line"><h3>Western Omelet</h3><span class="food-price">$13.52</span></div><p>Pepper Jack, Ham, Green Peppers &amp; Onions</p></article><article class="food-row"><div class="food-line"><h3>Meaty Omelet</h3><span class="food-price">$13.52</span></div><p>Ham, Bacon, Sausage &amp; Choice Of Cheese</p></article><article class="food-row"><div class="food-line"><h3>Reuben Omelet</h3><span class="food-price">$13.52</span></div><p>Corned Beef, Swiss &amp; Sauerkraut; Thousand Island</p></article><article class="food-row"><div class="food-line"><h3>Gyro Omelet</h3><span class="food-price">$13.52</span></div><p>Gyro Meat, Onion, Tomato &amp; Cheese; Tzatziki</p></article><article class="food-row"><div class="food-line"><h3>Philly Steak Omelet</h3><span class="food-price">$13.52</span></div><p>Onion, Tomato, Green Peppers &amp; Mozzarella</p></article><article class="food-row"><div class="food-line"><h3>Chicken Philly Omelet</h3><span class="food-price">$13.52</span></div><p>Onion, Green Peppers, Mushrooms &amp; Cheese</p></article></section><section class="section-card food-section" id="food-2" data-category="Breakfast Sandwiches"><h2>Breakfast Sandwiches</h2><p class="menu-note">Egg, American Cheese &amp; Choice Of Bacon, Ham Or Sausage</p><article class="food-row"><div class="food-line"><h3>Muffin Or Biscuit*</h3><span class="food-price">$4.16</span></div></article><article class="food-row"><div class="food-line"><h3>Plain Or Everything Bagel*</h3><span class="food-price">$5.20</span></div></article><article class="food-row"><div class="food-line"><h3>Croissant*</h3><span class="food-price">$6.24</span></div></article><article class="food-row"><div class="food-line"><h3>Johnny’s Breakfast Sandwich*</h3><span class="food-price">$6.24</span></div><p>White, Wheat Or Rye; Egg, American Cheese &amp; Choice Of Bacon, Ham Or Sausage</p></article></section><section class="section-card food-section" id="food-3" data-category="Breakfast Sides"><h2>Breakfast Sides</h2><article class="food-row"><div class="food-line"><h3>Baguette French Toast</h3><span class="food-price">$6.24</span></div></article><article class="food-row"><div class="food-line"><h3>Pancakes · 1 / 2</h3><span class="food-price">$4.16 / $6.24</span></div></article><article class="food-row"><div class="food-line"><h3>Waffle</h3><span class="food-price">$5.20</span></div></article><article class="food-row"><div class="food-line"><h3>Chicken &amp; Waffles</h3><span class="food-price">$11.44</span></div><p>Syrup &amp; Butter</p></article><article class="food-row"><div class="food-line"><h3>Bagel With Cream Cheese</h3><span class="food-price">$3.64</span></div></article><article class="food-row"><div class="food-line"><h3>Eggs · 2 / 3*</h3><span class="food-price">$3.12 / $4.16</span></div></article><article class="food-row"><div class="food-line"><h3>Home Fries / Shredded Potato</h3><span class="food-price">$3.11</span></div></article><article class="food-row"><div class="food-line"><h3>Hashbrown Patty</h3><span class="food-price">$2.07</span></div></article><article class="food-row"><div class="food-line"><h3>Corned Beef Hash</h3><span class="food-price">$7.28</span></div></article><article class="food-row"><div class="food-line"><h3>Breakfast Meat</h3><span class="food-price">$4.16</span></div><p>Sausage Links Or Patties, Ham Or Bacon</p></article><article class="food-row"><div class="food-line"><h3>Toast</h3><span class="food-price">$3.12</span></div><p>White, Wheat, Rye, Biscuit Or English Muffin</p></article><article class="food-row"><div class="food-line"><h3>Side Of Sausage Gravy</h3><span class="food-price">$3.12</span></div></article></section><section class="section-card food-section" id="food-4" data-category="Build Your Own Pizza"><h2>Build Your Own Pizza</h2><p class="menu-note">Choose Red Or White Sauce.</p><div class="table-scroll"><table><thead><tr><th scope="col">Size</th><th scope="col">Cheese</th><th scope="col">Extra Cheese</th></tr></thead><tbody><tr><th scope="row">6 Cut</th><td>$9.87</td><td>$2.08</td></tr><tr><th scope="row">8 Cut</th><td>$12.47</td><td>$2.69</td></tr><tr><th scope="row">12 Cut</th><td>$15.59</td><td>$3.12</td></tr><tr><th scope="row">16 Cut</th><td>$19.75</td><td>$3.64</td></tr><tr><th scope="row">1/2 Sheet</th><td>$20.79</td><td>$4.16</td></tr><tr><th scope="row">Full Sheet</th><td>$31.19</td><td>$6.24</td></tr><tr><th scope="row">GF 8 Cut</th><td>$16.63</td><td>$2.69</td></tr></tbody></table></div></section><section class="section-card food-section" id="food-5" data-category="Topping Prices"><h2>Topping Prices</h2><p class="menu-note">Per Topping On The Whole Pizza. Size Order: 6 / 8 / 12 / 16 / 1/2 Sheet / Full Sheet.</p><p class="menu-note"><b>Vegetables</b>: 1.56 / 2.08 / 2.55 / 3.12 / 3.38 / 5.20</p><p class="menu-note"><b>Pepperoni / Sausage / Ham</b>: 1.56 / 2.08 / 2.55 / 3.12 / 4.16 / 5.20</p><p class="menu-note"><b>Ground Beef</b>: 1.56 / 2.08 / 2.55 / 4.16 / 4.16 / 6.24</p><p class="menu-note"><b>Chicken / Bacon / Roasted Peppers</b>: 2.08 / 2.69 / 3.12 / 4.16 / 4.16 / 6.24</p><p class="menu-note"><b>Spinach</b>: 2.08 / 2.69 / 3.12 / 4.16 / 3.38 / 6.24</p><p class="menu-note">Extra Sauce: 6 Cut $2.08 / 8 Cut $2.69 / 12 Cut $3.12 / 16 Cut $3.64.</p><p class="menu-note">Vegetables: Green Peppers, Onion, Tomato, Banana Peppers, Jalapenos, Mushrooms, Black Olives &amp; Pineapple.</p><p class="menu-note">Half-Pizza Toppings Cost Half The Matching Whole-Topping Price, Rounded Up To The Next Cent. GF 8 Cut Uses 8-Cut Topping Prices.</p></section><section class="section-card food-section" id="food-6" data-category="Specialty Pizzas"><h2>Specialty Pizzas</h2><p class="menu-note">Price Order: 6 Cut / 8 Cut / 12 Cut / 16 Cut / GF 8 Cut</p><article class="food-row"><div class="food-line"><h3>Supreme</h3><span class="food-price">6 Cut $14.56 · 8 Cut $18.72 · 12 Cut $22.88 · 16 Cut $28.08 · GF 8 Cut $22.88</span></div><p>Pepperoni, Sausage, Ham, Green Peppers, Onions, Black Olives, Mushrooms</p></article><article class="food-row"><div class="food-line"><h3>Meaty</h3><span class="food-price">6 Cut $14.56 · 8 Cut $19.76 · 12 Cut $22.88 · 16 Cut $28.08 · GF 8 Cut $22.88</span></div><p>Pepperoni, Sausage, Ham, Bacon</p></article><article class="food-row"><div class="food-line"><h3>Veggie</h3><span class="food-price">6 Cut $13.52 · 8 Cut $18.72 · 12 Cut $22.88 · 16 Cut $28.08 · GF 8 Cut $22.88</span></div><p>Mushrooms, Green Peppers, Black Olives, Onions, Banana Peppers</p></article><article class="food-row"><div class="food-line"><h3>BLT</h3><span class="food-price">6 Cut $13.52 · 8 Cut $18.72 · 12 Cut $22.88 · 16 Cut $28.08 · GF 8 Cut $22.88</span></div><p>Bacon, Ham, Lettuce, Tomato, Mayo, Garlic Butter Sauce</p></article><article class="food-row"><div class="food-line"><h3>Caprese</h3><span class="food-price">6 Cut $13.52 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Red Sauce, Fresh Mozzarella, Balsamic Glaze, Tomato</p></article><article class="food-row"><div class="food-line"><h3>Margherita</h3><span class="food-price">6 Cut $14.56 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Red Sauce, Fresh Mozzarella, Virgin Olive Oil, Tomato</p></article><article class="food-row"><div class="food-line"><h3>Three Cheese &amp; Spinach</h3><span class="food-price">6 Cut $13.52 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Aglio Sauce, Baby Spinach, Tomatoes, Three-Cheese Blend</p></article><article class="food-row"><div class="food-line"><h3>Three Cheese &amp; Broccoli</h3><span class="food-price">6 Cut $13.52 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $19.76</span></div><p>Ranch Sauce, Broccoli, Shredded Provolone And Cheddar Cheese</p></article><article class="food-row"><div class="food-line"><h3>Chicken Bacon Ranch</h3><span class="food-price">6 Cut $14.56 · 8 Cut $18.72 · 12 Cut $22.88 · 16 Cut $28.08 · GF 8 Cut $22.88</span></div><p>Grilled Chicken, Bacon, Onions, Ranch Dressing</p></article><article class="food-row"><div class="food-line"><h3>Buffalo Chicken</h3><span class="food-price">6 Cut $14.56 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Breaded Chicken, Buffalo Sauce, Mozzarella, Cheddar, Onions, Tomato</p></article><article class="food-row"><div class="food-line"><h3>Grilled Chicken, Spinach &amp; Feta</h3><span class="food-price">6 Cut $14.56 · 8 Cut $23.92 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Aglio Sauce, Grilled Chicken, Baby Spinach, Red Onions, Cheese Blend, Feta</p></article><article class="food-row"><div class="food-line"><h3>Teriyaki Chicken</h3><span class="food-price">6 Cut $14.56 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Johnny’s Secret Teriyaki Sauce, Grilled Chicken, Onion, Green Peppers, Cheese</p></article><article class="food-row"><div class="food-line"><h3>Sweet Baby Ray’s BBQ</h3><span class="food-price">6 Cut $14.56 · 8 Cut $18.72 · 12 Cut $22.88 · 16 Cut $28.08 · GF 8 Cut $22.88</span></div><p>Premium Chicken, Cheddar Cheese, Shredded Provolone Cheese</p></article><article class="food-row"><div class="food-line"><h3>Hawaiian Baby Ray’s</h3><span class="food-price">6 Cut $14.56 · 8 Cut $18.72 · 12 Cut $22.88 · 16 Cut $28.08 · GF 8 Cut $22.88</span></div><p>Ham, Bacon, Shredded Provolone, Pineapple, Roasted Red Peppers</p></article><article class="food-row"><div class="food-line"><h3>Cheeseburger Bacon</h3><span class="food-price">6 Cut $14.56 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Ground Beef, Bacon, Tomato, Onion, Pickle, Cheddar, Provolone, Mozzarella</p></article><article class="food-row"><div class="food-line"><h3>Philly Cheesesteak</h3><span class="food-price">6 Cut $14.56 · 8 Cut $18.72 · 12 Cut $22.88 · 16 Cut $28.08 · GF 8 Cut $22.88</span></div><p>Ribeye Steak, Green Peppers, Onion, Aglio Sauce; Horsey Sauce On The Side</p></article><article class="food-row"><div class="food-line"><h3>Meatball Parma Johnny</h3><span class="food-price">6 Cut $14.56 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Pizza Sauce, Meatballs, Pepperoni, Cheese</p></article><article class="food-row"><div class="food-line"><h3>Italian</h3><span class="food-price">6 Cut $14.56 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Aglio, Pepperoni, Salami, Ham, Tomatoes, Onions, Banana Peppers, Three-Cheese Blend</p></article><article class="food-row"><div class="food-line"><h3>Cuban</h3><span class="food-price">6 Cut $14.56 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Mayo, Mustard, Ham, Pulled Pork, Pickles, Swiss, Three-Cheese Blend</p></article><article class="food-row"><div class="food-line"><h3>Gyro</h3><span class="food-price">6 Cut $14.56 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Pizza Sauce, Gyro Meat, Onions, Tomato, Cheese, Feta, Tzatziki</p></article><article class="food-row"><div class="food-line"><h3>Reuben</h3><span class="food-price">6 Cut $15.60 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Thousand Island Dressing, Corned Beef, Swiss-Cheese Blend</p></article><article class="food-row"><div class="food-line"><h3>Biscuit &amp; Gravy</h3><span class="food-price">6 Cut $13.52 · 8 Cut $19.76 · 12 Cut $23.92 · 16 Cut $28.08 · GF 8 Cut $23.92</span></div><p>Sausage Gravy, Biscuits, Sausage, Bacon, Cheese</p></article></section><section class="section-card food-section" id="food-7" data-category="Sheet Pizzas"><h2>Sheet Pizzas</h2><p class="menu-note">All Specialty Pizzas: 1/2 Sheet $30.16 / Full Sheet $43.68.</p></section><section class="section-card food-section" id="food-8" data-category="Calzones"><h2>Calzones</h2><p class="menu-note">Same Price As The Matching 6-Cut Pizza.</p></section><section class="section-card food-section" id="food-9" data-category="Flatbreads"><h2>Flatbreads</h2><p class="menu-note">Any Specialty, Coney Style Or Build Your Own $13.52.</p><p class="menu-note">Coney: Onion, Chili, Mustard &amp; Jumbo Hot Dogs.</p></section><section class="section-card food-section" id="food-10" data-category="Subs &amp; Wraps"><h2>Subs &amp; Wraps</h2><p class="menu-note">With Chips Or Fries</p><article class="food-row"><div class="food-line"><h3>Chicken Bacon Ranch</h3><span class="food-price">$12.48</span></div><p>Grilled Chicken, Bacon, Cheese, Lettuce, Tomato, Ranch</p></article><article class="food-row"><div class="food-line"><h3>Chicken Philly</h3><span class="food-price">$12.48</span></div><p>Green Peppers, Onions, Mushrooms, Provolone</p></article><article class="food-row"><div class="food-line"><h3>Chicken Club</h3><span class="food-price">$12.48</span></div><p>Bacon, Lettuce, Tomato, Mayo, Provolone</p></article><article class="food-row"><div class="food-line"><h3>Ham &amp; Turkey Club</h3><span class="food-price">$12.48</span></div><p>Ham, Turkey, Bacon, Lettuce, Tomato, Mayo, Provolone</p></article><article class="food-row"><div class="food-line"><h3>Philly Ribeye</h3><span class="food-price">$13.52</span></div><p>Green Peppers, Onions, Mushrooms, Provolone; Horsey Sauce On The Side</p></article><article class="food-row"><div class="food-line"><h3>Italian</h3><span class="food-price">$12.48</span></div><p>Ham, Salami, Pepperoni, Banana Peppers, Lettuce, Tomato, Onion, Provolone, Dressing</p></article><article class="food-row"><div class="food-line"><h3>Pulled Pork Sub</h3><span class="food-price">$12.48</span></div><p>1/2 Lb BBQ Pulled Pork With Cheddar On A Sub Bun</p></article><article class="food-row"><div class="food-line"><h3>Pulled Pork Mac &amp; Cheese Wrap</h3><span class="food-price">$15.60</span></div><p>BBQ Pulled Pork, Mac &amp; Cheese, Cheddar</p></article><article class="food-row"><div class="food-line"><h3>Grilled Chicken Sandwich</h3><span class="food-price">$13.52</span></div><p>Lettuce, Tomato; Served On A Burger Bun</p></article><article class="food-row"><div class="food-line"><h3>Turkey Swiss Melt</h3><span class="food-price">$13.51</span></div><p>Turkey, Lettuce, Tomato, Melted Swiss; Sub Bun</p></article><article class="food-row"><div class="food-line"><h3>Buffalo Mac &amp; Cheese Wrap</h3><span class="food-price">$15.60</span></div><p>Crispy Chicken, Buffalo Sauce, Mac &amp; Cheese, Shredded Cheese</p></article><article class="food-row"><div class="food-line"><h3>Meatball Sub</h3><span class="food-price">$12.48</span></div></article><article class="food-row"><div class="food-line"><h3>Chicken Parm Sub</h3><span class="food-price">$13.52</span></div><p>Mozzarella, Marinara Sauce</p></article><article class="food-row"><div class="food-line"><h3>Grilled Cheese</h3><span class="food-price">$10.40</span></div><p>White, Wheat Or Rye Bread</p></article><article class="food-row"><div class="food-line"><h3>Triple Decker BLT</h3><span class="food-price">$14.55</span></div><p>Bacon, Lettuce, Tomato, Mayo; Choice Of Bread</p></article><article class="food-row"><div class="food-line"><h3>Buffalo Chicken Wrap</h3><span class="food-price">$13.52</span></div><p>Breaded Chicken, Lettuce, Tomato, Mild Sauce</p></article><article class="food-row"><div class="food-line"><h3>Bacon Cheeseburger Philly*</h3><span class="food-price">$15.60</span></div><p>Burger &amp; Philly Meat, Bacon, American, Provolone, Tomato, Onion, Jalapeños, Lettuce, Mayo</p></article><article class="food-row"><div class="food-line"><h3>Sausage Sub</h3><span class="food-price">$12.48</span></div><p>Onions, Green Peppers, Red Sauce</p></article><article class="food-row"><div class="food-line"><h3>Chicken Caesar Wrap</h3><span class="food-price">$12.48</span></div><p>Grilled Chicken, Lettuce, Cheese, Caesar Dressing</p></article><article class="food-row"><div class="food-line"><h3>Johnny’s Cuban</h3><span class="food-price">$14.56</span></div><p>Ham, Pulled Pork, Swiss, Mustard, Pickles, Mayo; Sub Bun</p></article><article class="food-row"><div class="food-line"><h3>Chicken Caprese</h3><span class="food-price">$14.56</span></div><p>Melted Mozzarella, Tomato, Basil, Mayo, Balsamic Glaze</p></article><article class="food-row"><div class="food-line"><h3>BLT Wrap</h3><span class="food-price">$12.48</span></div><p>Bacon, Lettuce, Tomato, Mayo</p></article></section><section class="section-card food-section" id="food-11" data-category="Gyros"><h2>Gyros</h2><p class="menu-note">With Chips Or Fries</p><article class="food-row"><div class="food-line"><h3>Traditional Gyro</h3><span class="food-price">$13.52</span></div><p>Lamb &amp; Beef Gyro Meat, Onions, Tomato, Tzatziki; Warm Pita</p></article><article class="food-row"><div class="food-line"><h3>Chicken Gyro</h3><span class="food-price">$13.52</span></div><p>Grilled Chicken, Tzatziki, Tomato, Lettuce, Red Onions; Toasted Pita</p></article><p class="menu-note">Extra Gyro Meat Or Chicken $4.16</p></section><section class="section-card food-section" id="food-12" data-category="Corned Beef &amp; Reubens"><h2>Corned Beef &amp; Reubens</h2><p class="menu-note">With Chips Or Fries</p><article class="food-row"><div class="food-line"><h3>Corned Beef Sandwich</h3><span class="food-price">$14.56</span></div><p>8 Oz Lean Corned Beef On Rye; Thousand Island On The Side</p></article><article class="food-row"><div class="food-line"><h3>Reuben</h3><span class="food-price">$14.56</span></div><p>8 Oz Corned Beef, Swiss, Sauerkraut, Rye; Thousand Island On The Side</p></article><article class="food-row"><div class="food-line"><h3>Turkey Reuben</h3><span class="food-price">$14.56</span></div><p>Turkey, Swiss, Sauerkraut; Thousand Island On The Side</p></article></section><section class="section-card food-section" id="food-13" data-category="Burgers"><h2>Burgers</h2><p class="menu-note">With Chips Or Fries</p><article class="food-row"><div class="food-line"><h3>Single Burger*</h3><span class="food-price">$11.44</span></div><p>Lettuce, Tomato, Onions, Pickles</p></article><article class="food-row"><div class="food-line"><h3>Double Burger*</h3><span class="food-price">$13.52</span></div><p>Lettuce, Tomato, Onions, Pickles</p></article><article class="food-row"><div class="food-line"><h3>Italian Roman Burger*</h3><span class="food-price">$14.56</span></div><p>Two Patties, Salami, Pepperoni, Provolone, Tomato, Lettuce, Onion, Mayo, Italian Dressing</p></article><article class="food-row"><div class="food-line"><h3>Patty Melt*</h3><span class="food-price">$13.52</span></div><p>White, Wheat Or Rye; Sautéed Onions, Choice Of Cheese</p></article><article class="food-row"><div class="food-line"><h3>Johnny Boy*</h3><span class="food-price">$14.56</span></div><p>Two Patties, American Cheese, Secret Sauce, Lettuce</p></article><article class="food-row"><div class="food-line"><h3>Chili Burger*</h3><span class="food-price">$13.52</span></div><p>Jalapeños, Chili, Pepper Jack Cheese</p></article><article class="food-row"><div class="food-line"><h3>Breakfast Burger*</h3><span class="food-price">$14.56</span></div><p>Hash Brown Patty, Bacon, Egg Over Medium, American Cheese</p></article><article class="food-row"><div class="food-line"><h3>Cajun Burger*</h3><span class="food-price">$14.56</span></div><p>Ghost Pepper Salsa, Fresh Jalapeños, Cajun, Pepper Jack</p></article><article class="food-row"><div class="food-line"><h3>Western Burger*</h3><span class="food-price">$14.56</span></div><p>Bacon, Cheddar, BBQ Sauce, Onion Ring</p></article><article class="food-row"><div class="food-line"><h3>Bacon Double Burger*</h3><span class="food-price">$14.56</span></div><p>Two Patties, Double Cheese, Double Bacon</p></article><article class="food-row"><div class="food-line"><h3>Caprese Burger*</h3><span class="food-price">$14.56</span></div><p>Fresh Mozzarella, Tomato, Balsamic Glaze, Fresh Basil, Basil Mayo</p></article><p class="menu-note">Cheese: American, Cheddar, Swiss, Provolone Or Pepper Jack. Extra Cheese $1.04.</p></section><section class="section-card food-section" id="food-14" data-category="Hot Dogs"><h2>Hot Dogs</h2><article class="food-row"><div class="food-line"><h3>Jumbo Hot Dog</h3><span class="food-price">$5.20</span></div></article><article class="food-row"><div class="food-line"><h3>Loaded Dog</h3><span class="food-price">$6.24</span></div><p>Chili, Cheese, Mustard, Onions</p></article><article class="food-row"><div class="food-line"><h3>Pretzel Dog</h3><span class="food-price">$5.20</span></div></article><article class="food-row"><div class="food-line"><h3>Single Corn Dog</h3><span class="food-price">$3.12</span></div></article><p class="menu-note">Add Chili $0.83 / Cheese $0.52</p><p class="menu-note">Dog Meal Deals Include Chips Or Fries &amp; A Fountain Drink.</p><article class="food-row"><div class="food-line"><h3>Two Corn Dogs</h3><span class="food-price">$7.28</span></div></article><article class="food-row"><div class="food-line"><h3>Two Loaded Dogs</h3><span class="food-price">$11.44</span></div><p>Chili, Cheese, Mustard, Onions</p></article><article class="food-row"><div class="food-line"><h3>Two Plain Dogs</h3><span class="food-price">$10.40</span></div></article></section><section class="section-card food-section" id="food-15" data-category="Salads"><h2>Salads</h2><article class="food-row"><div class="food-line"><h3>House</h3><span class="food-price">$7.28</span></div><p>Tomato, Onions, Cheese, Egg</p></article><article class="food-row"><div class="food-line"><h3>Cobb</h3><span class="food-price">$11.44</span></div><p>Tomato, Egg, Cheese, Bacon</p></article><article class="food-row"><div class="food-line"><h3>Tuna</h3><span class="food-price">$11.44</span></div><p>Banana Peppers, Tomato, Cheese</p></article><article class="food-row"><div class="food-line"><h3>Chef</h3><span class="food-price">$11.44</span></div><p>Tomato, Ham, Turkey, Egg, Cheese</p></article><article class="food-row"><div class="food-line"><h3>Antipasta</h3><span class="food-price">$11.44</span></div><p>Cheese, Ham, Salami, Pepperoni, Tomato, Banana Peppers</p></article><article class="food-row"><div class="food-line"><h3>Chicken Caesar</h3><span class="food-price">$12.48</span></div><p>Iceberg Lettuce, Grilled Chicken, Croutons; Caesar Dressing</p></article><article class="food-row"><div class="food-line"><h3>Spinach</h3><span class="food-price">$15.60</span></div><p>Chicken, Turkey Or Tuna; Red Onions, Cheese, Tomato, Egg</p></article><article class="food-row"><div class="food-line"><h3>Gyro</h3><span class="food-price">$14.56</span></div><p>Iceberg Lettuce, Tomato, Onion, Feta, Mozzarella; Tzatziki</p></article><article class="food-row"><div class="food-line"><h3>Crispy Chicken</h3><span class="food-price">$14.56</span></div><p>Crispy Chicken, Choice Of Sauce, Green Peppers, Tomato, Black Olives</p></article><article class="food-row"><div class="food-line"><h3>Side Salad</h3><span class="food-price">$4.16</span></div><p>Lettuce, Cheese, Tomato, Onions</p></article><p class="menu-note"><b>Salad Add-Ons:</b> Chicken $5.20 / Shrimp $7.28.</p><p class="menu-note"><b>Dressings:</b><br>Ranch, Italian, Blue Cheese, Poppyseed, Balsamic Vinaigrette, Caesar, Honey Mustard, Red French, Thousand Island &amp; Tzatziki.</p></section><section class="section-card food-section" id="food-16" data-category="Johnny&#x27;s Signature Pastas"><h2>Johnny&#x27;s Signature Pastas</h2><p class="menu-note">With Side Salad &amp; Garlic Bread. Penne Or Fettuccine.</p><article class="food-row"><div class="food-line"><h3>Red Or Aglio Pasta</h3><span class="food-price">$11.44</span></div></article><article class="food-row"><div class="food-line"><h3>Alfredo Pasta</h3><span class="food-price">$14.56</span></div></article><article class="food-row"><div class="food-line"><h3>Chicken Broccoli Alfredo</h3><span class="food-price">$16.64</span></div><p>Chicken &amp; Broccoli In Alfredo Sauce</p></article><article class="food-row"><div class="food-line"><h3>Mushroom Spinach Alfredo</h3><span class="food-price">$15.60</span></div><p>Sautéed Mushrooms &amp; Spinach In Alfredo</p></article><article class="food-row"><div class="food-line"><h3>Chicken Parmesan</h3><span class="food-price">$17.68</span></div><p>Breaded Chicken With Red Sauce</p></article><article class="food-row"><div class="food-line"><h3>Chicken Parm With Alfredo</h3><span class="food-price">$19.76</span></div></article><article class="food-row"><div class="food-line"><h3>Cincinnati Chili</h3><span class="food-price">$16.64</span></div><p>Homemade Chili, Cheddar &amp; Onions</p></article><article class="food-row"><div class="food-line"><h3>Buffalo Chicken Alfredo</h3><span class="food-price">$17.68</span></div><p>Breaded Chicken In Buffalo Alfredo Sauce</p></article><article class="food-row"><div class="food-line"><h3>Shrimp Scampi*</h3><span class="food-price">$18.72</span></div><p>Shrimp Tossed In Aglio Sauce</p></article><article class="food-row"><div class="food-line"><h3>Shrimp Broccoli Alfredo*</h3><span class="food-price">$18.72</span></div><p>Sautéed Shrimp &amp; Broccoli In Alfredo</p></article><article class="food-row"><div class="food-line"><h3>Extra Garlic Bread</h3><span class="food-price">$0.83</span></div></article><p class="menu-note">Add Meatballs Or Sausage $4.16.</p></section><section class="section-card food-section" id="food-17" data-category="Fish &amp; Seafood"><h2>Fish &amp; Seafood</h2><p class="menu-note">Cod Or Perch; Chips Or Fries, Tartar &amp; Slaw</p><article class="food-row"><div class="food-line"><h3>1-Piece Fish Meal*</h3><span class="food-price">$12.48</span></div></article><article class="food-row"><div class="food-line"><h3>2-Piece Fish Meal*</h3><span class="food-price">$16.64</span></div></article><article class="food-row"><div class="food-line"><h3>3-Piece Fish Meal*</h3><span class="food-price">$18.72</span></div></article><article class="food-row"><div class="food-line"><h3>Shrimp Basket*</h3><span class="food-price">$10.40</span></div></article></section><section class="section-card food-section" id="food-18" data-category="Fish Subs &amp; Wraps"><h2>Fish Subs &amp; Wraps</h2><p class="menu-note">With Chips Or Fries</p><article class="food-row"><div class="food-line"><h3>Cod Or Perch Sub*</h3><span class="food-price">$12.48</span></div><p>Lettuce, Tomato &amp; Tartar</p></article><article class="food-row"><div class="food-line"><h3>Tuna Melt Sub</h3><span class="food-price">$12.48</span></div><p>Lettuce, Tomato, Provolone; Served Hot</p></article><article class="food-row"><div class="food-line"><h3>Cold Tuna Sub / Wrap</h3><span class="food-price">$11.44</span></div><p>Lettuce, Tomato &amp; Cheese</p></article></section><section class="section-card food-section" id="food-19" data-category="Fried Chicken Dinners &amp; Ribs"><h2>Fried Chicken Dinners &amp; Ribs</h2><article class="food-row"><div class="food-line"><h3>4-Piece Dinner</h3><span class="food-price">$17.68</span></div><p>2 Small Sides &amp; 1 Biscuit</p></article><article class="food-row"><div class="food-line"><h3>8-Piece Dinner</h3><span class="food-price">$33.28</span></div><p>2 Large Sides &amp; 2 Biscuits</p></article><article class="food-row"><div class="food-line"><h3>12-Piece Dinner</h3><span class="food-price">$41.60</span></div><p>3 Large Sides &amp; 4 Biscuits</p></article><article class="food-row"><div class="food-line"><h3>1/2 Slab Ribs</h3><span class="food-price">$22.87</span></div><p>2 Sides · BBQ Or Dry</p></article><article class="food-row"><div class="food-line"><h3>Full Slab Ribs</h3><span class="food-price">$34.31</span></div><p>2 Sides · BBQ Or Dry</p></article><p class="menu-note">Side Choices For Fried Chicken Dinners &amp; Ribs Only: Fries, Tater Tots, Mac &amp; Cheese, Coleslaw, Side Salad, Macaroni Salad, Pasta Salad Or Potato Salad. 1/2 Order Onion Rings +$4.16.</p></section><section class="section-card food-section" id="food-20" data-category="Chicken Wings"><h2>Chicken Wings</h2><p class="menu-note">Traditional Or Boneless</p><article class="food-row"><div class="food-line"><h3>6 / 12 / 18 / 24 Wings</h3><span class="food-price">$10.39 / $16.63 / $22.87 / $31.19</span></div></article><p class="menu-note">Sauces: Mild, Hot, Spicy Garlic, Teriyaki, Honey Mustard, BBQ, Butter Garlic, Sweet Heat Chili, Johnny&#x27;s Hott Hott, Ghost Pepper, Buffalo Ranch, Butter Garlic Parm, Spicy Garlic Parm &amp; Spicy BBQ. Plain / No Sauce Available. Ranch Available With 12, 18 Or 24 Wings.</p><p class="menu-note">Dry Rubs: Cajun, Six Pepper, Sea Salt &amp; Cracked Pepper, Garlic &amp; Ghost Pepper.</p></section><section class="section-card food-section" id="food-21" data-category="Kids Meals"><h2>Kids Meals</h2><p class="menu-note">With Chips Or Fries &amp; A Small Drink</p><article class="food-row"><div class="food-line"><h3>Grilled Cheese / Cheeseburger* / Corn Dog / Hot Dog / 4-Piece Nuggets</h3><span class="food-price">$6.24 Each</span></div></article></section><section class="section-card food-section" id="food-22" data-category="Pierogies"><h2>Pierogies</h2><p class="menu-note">3 Per Order, Except Plain Potato &amp; Cheese</p><article class="food-row"><div class="food-line"><h3>Bacon &amp; Cheddar</h3><span class="food-price">$12.48</span></div></article><article class="food-row"><div class="food-line"><h3>Reuben</h3><span class="food-price">$15.60</span></div></article><article class="food-row"><div class="food-line"><h3>Onion, Mushroom &amp; Pepper</h3><span class="food-price">$12.48</span></div></article><article class="food-row"><div class="food-line"><h3>Pulled Pork</h3><span class="food-price">$15.60</span></div></article><article class="food-row"><div class="food-line"><h3>Chicken Broccoli Alfredo</h3><span class="food-price">$16.64</span></div></article><article class="food-row"><div class="food-line"><h3>Philly Cheesesteak</h3><span class="food-price">$15.60</span></div></article><article class="food-row"><div class="food-line"><h3>Beef &amp; Onions</h3><span class="food-price">$14.56</span></div></article><article class="food-row"><div class="food-line"><h3>Spinach Alfredo &amp; Feta</h3><span class="food-price">$15.60</span></div></article><article class="food-row"><div class="food-line"><h3>Double Sausage &amp; Onions</h3><span class="food-price">$15.60</span></div></article><article class="food-row"><div class="food-line"><h3>Buffalo Chicken Alfredo</h3><span class="food-price">$15.60</span></div></article><article class="food-row"><div class="food-line"><h3>Chicken Philly</h3><span class="food-price">$14.56</span></div></article></section><section class="section-card food-section" id="food-23" data-category="Plain Potato &amp; Cheese Pierogies"><h2>Plain Potato &amp; Cheese Pierogies</h2><article class="food-row"><div class="food-line"><h3>1 / 2 / 3 Pieces</h3><span class="food-price">$3.43 / $6.24 / $9.36</span></div></article></section><section class="section-card food-section" id="food-24" data-category="Appetizers"><h2>Appetizers</h2><article class="food-row"><div class="food-line"><h3>Jumbo Soft Pretzel</h3><span class="food-price">$6.24</span></div><p>Beer Cheese +$1.04</p></article><article class="food-row"><div class="food-line"><h3>Potato Skins · 4</h3><span class="food-price">$10.40</span></div><p>Cheddar &amp; Bacon; Sour Cream</p></article><article class="food-row"><div class="food-line"><h3>Mozzarella Wedges · 5</h3><span class="food-price">$7.28</span></div></article><article class="food-row"><div class="food-line"><h3>Jalapeño Poppers · 6</h3><span class="food-price">$7.28</span></div></article><article class="food-row"><div class="food-line"><h3>Fried Pickles</h3><span class="food-price">$8.32</span></div></article><article class="food-row"><div class="food-line"><h3>Mac &amp; Cheese Bites</h3><span class="food-price">$8.32</span></div></article><article class="food-row"><div class="food-line"><h3>Breaded Zucchini</h3><span class="food-price">$9.36</span></div></article><article class="food-row"><div class="food-line"><h3>Breaded Mushrooms</h3><span class="food-price">$8.32</span></div></article><article class="food-row"><div class="food-line"><h3>Broccoli Cheddar Bites</h3><span class="food-price">$8.32</span></div><p>Broccoli, Cheddar &amp; Bacon</p></article><article class="food-row"><div class="food-line"><h3>Garlic Parm Bites</h3><span class="food-price">$8.32</span></div><p>Approx. 20–24 Pieces</p></article><article class="food-row"><div class="food-line"><h3>3 Meatballs With Cheese</h3><span class="food-price">$6.24</span></div><p>Marinara &amp; Melted Cheese</p></article><article class="food-row"><div class="food-line"><h3>Chicken Fries</h3><span class="food-price">$6.24</span></div><p>12 Pieces &amp; A Small Dressing</p></article><article class="food-row"><div class="food-line"><h3>Chicken Strips - 4 / 6 Pieces</h3><span class="food-price">$11.44 / $14.56</span></div></article><article class="food-row"><div class="food-line"><h3>Chicken Strip Basket - 4 / 6 Pieces</h3><span class="food-price">$14.56 / $16.64</span></div><p>With Chips Or Fries &amp; Dipping Sauce</p></article><article class="food-row"><div class="food-line"><h3>Loaded Fries Or Tots</h3><span class="food-price">$11.44</span></div><p>Mozzarella, Cheddar &amp; Bacon; Chili &amp; Sour Cream On The Side</p></article><p class="menu-note">Pretzel Beer Cheese +$1.04.</p></section><section class="section-card food-section" id="food-25" data-category="Cheese Bread"><h2>Cheese Bread</h2><p class="menu-note">Garlic Sauce &amp; Mozzarella/Provolone; Marinara</p><article class="food-row"><div class="food-line"><h3>Small / Medium / Large</h3><span class="food-price">$7.80 / $10.40 / $15.60</span></div></article></section><section class="section-card food-section" id="food-26" data-category="Sides &amp; Chili"><h2>Sides &amp; Chili</h2><article class="food-row"><div class="food-line"><h3>Regular Fries</h3><span class="food-price">$3.64</span></div><p>Cajun Or Garlic Seasoning +$1.04</p></article><article class="food-row"><div class="food-line"><h3>Large Fries</h3><span class="food-price">$6.24</span></div></article><article class="food-row"><div class="food-line"><h3>Tater Tots</h3><span class="food-price">$5.20</span></div></article><article class="food-row"><div class="food-line"><h3>Onion Rings</h3><span class="food-price">$8.31</span></div></article><article class="food-row"><div class="food-line"><h3>Coleslaw · Small / Large</h3><span class="food-price">$3.12 / $4.16</span></div></article><article class="food-row"><div class="food-line"><h3>Mac &amp; Cheese · Small / Large</h3><span class="food-price">$4.16 / $6.24</span></div></article><article class="food-row"><div class="food-line"><h3>Signature Chili - Cup / Bowl / Quart</h3><span class="food-price">$4.16 / $5.20 / $13.52</span></div></article></section><section class="section-card food-section" id="food-27" data-category="South Of The Border"><h2>South Of The Border</h2><article class="food-row"><div class="food-line"><h3>Cheese Quesadilla</h3><span class="food-price">$7.28</span></div></article><article class="food-row"><div class="food-line"><h3>Chicken Quesadilla</h3><span class="food-price">$11.44</span></div><p>Chicken, Green Peppers, Tomato, Onions &amp; Cheese</p></article><article class="food-row"><div class="food-line"><h3>Philly Steak Quesadilla</h3><span class="food-price">$13.52</span></div><p>Green Peppers, Tomato, Onions &amp; Cheese</p></article><p class="menu-note">Chicken &amp; Philly Quesadillas Include Salsa &amp; Sour Cream.</p></section></div><p id="noResults" hidden>No Menu Items Matched Your Search.</p><p class="menu-advisory">*These Items May Be Served Undercooked. Consuming Raw Or Undercooked Meats, Poultry, Seafood, Shellfish, Or Eggs May Increase Your Risk Of Foodborne Illness.</p><p class="menu-note">Menu Prices And Availability May Change. Final Options And Totals Are Confirmed When Ordering.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="order-bar">
+    <div class="container order-bar-inner">
+      <div class="order-copy">Browse the menu, check pricing, and order online anytime.</div>
+      <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
+    </div>
+  </div>
+
+  
+<script>
+const search=document.getElementById('searchBox'),category=document.getElementById('categoryFilter'),sections=[...document.querySelectorAll('.food-section')];
+function filterMenu(){const q=search.value.trim().toLowerCase();let count=0;for(const section of sections){const matchesCategory=category.value==='all'||category.value===section.dataset.category;const rows=[...section.querySelectorAll('.food-row')];const headingMatches=section.querySelector('h2').textContent.toLowerCase().includes(q);const contextMatches=[...section.querySelectorAll('.menu-note,table')].some(x=>x.textContent.toLowerCase().includes(q));let matches=0;for(const row of rows){row.hidden=!!q&&!headingMatches&&!contextMatches&&!row.textContent.toLowerCase().includes(q);if(!row.hidden)matches++;}section.hidden=!matchesCategory||(!!q&&!matches&&!headingMatches&&!contextMatches);if(!section.hidden)count++;}document.getElementById('statusBar').textContent=count+' Categories Shown';document.getElementById('noResults').hidden=count>0;}
+search.addEventListener('input',filterMenu);category.addEventListener('change',filterMenu);filterMenu();
+</script></body>
+</html>

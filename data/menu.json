@@ -1,0 +1,1834 @@
+[
+  {
+    "name": "Breakfast 8 AM - 3:30 PM",
+    "blocks": [
+      [
+        "r",
+        [
+          "Johnny’s Sunshine*",
+          "$11.44",
+          "2 Eggs, Toast, Choice Of Meat & Potato"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Country Fried Steak*",
+          "$13.52",
+          "2 Eggs, Potato, Biscuit & Sausage Gravy"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Supreme Breakfast Bowl",
+          "$11.44",
+          "Ham, Sausage, Bacon, Onion, Peppers, Tomato, Scrambled Eggs, Home Fries, Cheese & Gravy; Toast"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Breakfast Burrito",
+          "$10.40",
+          "Ham, Sausage, Bacon, Onion, Peppers, Tomato, Scrambled Eggs, American Cheese & Home Fries Inside"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Biscuits & Gravy",
+          "$7.28",
+          "2 Biscuits With Sausage Gravy"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Biscuits & Gravy Meal*",
+          "$12.48",
+          "2 Biscuits, Sausage Gravy, 2 Eggs & Potato"
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Omelets",
+    "blocks": [
+      [
+        "n",
+        "With Choice Of Potato & Toast"
+      ],
+      [
+        "r",
+        [
+          "Build Your Own Omelet",
+          "$11.44",
+          "American, Cheddar, Swiss, Provolone Or Pepper Jack; Ham, Bacon Or Sausage; Up To 3 Veggies. Extra Meat +$1.56"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Western Omelet",
+          "$13.52",
+          "Pepper Jack, Ham, Green Peppers & Onions"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Meaty Omelet",
+          "$13.52",
+          "Ham, Bacon, Sausage & Choice Of Cheese"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Reuben Omelet",
+          "$13.52",
+          "Corned Beef, Swiss & Sauerkraut; Thousand Island"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Gyro Omelet",
+          "$13.52",
+          "Gyro Meat, Onion, Tomato & Cheese; Tzatziki"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Philly Steak Omelet",
+          "$13.52",
+          "Onion, Tomato, Green Peppers & Mozzarella"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Philly Omelet",
+          "$13.52",
+          "Onion, Green Peppers, Mushrooms & Cheese"
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Breakfast Sandwiches",
+    "blocks": [
+      [
+        "n",
+        "Egg, American Cheese & Choice Of Bacon, Ham Or Sausage"
+      ],
+      [
+        "r",
+        [
+          "Muffin Or Biscuit*",
+          "$4.16",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Plain Or Everything Bagel*",
+          "$5.20",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Croissant*",
+          "$6.24",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Johnny’s Breakfast Sandwich*",
+          "$6.24",
+          "White, Wheat Or Rye; Egg, American Cheese & Choice Of Bacon, Ham Or Sausage"
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Breakfast Sides",
+    "blocks": [
+      [
+        "r",
+        [
+          "Baguette French Toast",
+          "$6.24",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Pancakes · 1 / 2",
+          "$4.16 / $6.24",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Waffle",
+          "$5.20",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken & Waffles",
+          "$11.44",
+          "Syrup & Butter"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Bagel With Cream Cheese",
+          "$3.64",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Eggs · 2 / 3*",
+          "$3.12 / $4.16",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Home Fries / Shredded Potato",
+          "$3.11",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Hashbrown Patty",
+          "$2.07",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Corned Beef Hash",
+          "$7.28",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Breakfast Meat",
+          "$4.16",
+          "Sausage Links Or Patties, Ham Or Bacon"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Toast",
+          "$3.12",
+          "White, Wheat, Rye, Biscuit Or English Muffin"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Side Of Sausage Gravy",
+          "$3.12",
+          ""
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Build Your Own Pizza",
+    "blocks": [
+      [
+        "n",
+        "Choose Red Or White Sauce."
+      ],
+      [
+        "t",
+        [
+          [
+            [
+              "Size",
+              "Cheese",
+              "Extra Cheese"
+            ],
+            [
+              "6 Cut",
+              "9.87",
+              "2.08"
+            ],
+            [
+              "8 Cut",
+              "12.47",
+              "2.69"
+            ],
+            [
+              "12 Cut",
+              "15.59",
+              "3.12"
+            ],
+            [
+              "16 Cut",
+              "19.75",
+              "3.64"
+            ],
+            [
+              "1/2 Sheet",
+              "20.79",
+              "4.16"
+            ],
+            [
+              "Full Sheet",
+              "31.19",
+              "6.24"
+            ],
+            [
+              "GF 8 Cut",
+              "16.63",
+              "2.69"
+            ]
+          ],
+          [
+            0.36,
+            0.32,
+            0.32
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Topping Prices",
+    "blocks": [
+      [
+        "n",
+        "Per Topping On The Whole Pizza. Size Order: 6 / 8 / 12 / 16 / 1/2 Sheet / Full Sheet."
+      ],
+      [
+        "n",
+        "<b>Vegetables</b>: 1.56 / 2.08 / 2.55 / 3.12 / 3.38 / 5.20"
+      ],
+      [
+        "n",
+        "<b>Pepperoni / Sausage / Ham</b>: 1.56 / 2.08 / 2.55 / 3.12 / 4.16 / 5.20"
+      ],
+      [
+        "n",
+        "<b>Ground Beef</b>: 1.56 / 2.08 / 2.55 / 4.16 / 4.16 / 6.24"
+      ],
+      [
+        "n",
+        "<b>Chicken / Bacon / Roasted Peppers</b>: 2.08 / 2.69 / 3.12 / 4.16 / 4.16 / 6.24"
+      ],
+      [
+        "n",
+        "<b>Spinach</b>: 2.08 / 2.69 / 3.12 / 4.16 / 3.38 / 6.24"
+      ],
+      [
+        "n",
+        "Extra Sauce: 6 Cut $2.08 / 8 Cut $2.69 / 12 Cut $3.12 / 16 Cut $3.64."
+      ],
+      [
+        "n",
+        "Vegetables: Green Peppers, Onion, Tomato, Banana Peppers, Jalapenos, Mushrooms, Black Olives & Pineapple."
+      ],
+      [
+        "n",
+        "Half-pizza toppings cost half the matching whole-topping price, rounded up to the next cent. GF 8 Cut Uses 8-Cut Topping Prices."
+      ]
+    ]
+  },
+  {
+    "name": "Specialty Pizzas",
+    "blocks": [
+      [
+        "n",
+        "Price Order: 6 Cut / 8 Cut / 12 Cut / 16 Cut / GF 8 Cut"
+      ],
+      [
+        "pizza",
+        [
+          "Supreme",
+          [
+            14.56,
+            18.72,
+            22.88,
+            28.08,
+            22.88
+          ],
+          "Pepperoni, sausage, ham, green peppers, onions, black olives, mushrooms"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Meaty",
+          [
+            14.56,
+            19.76,
+            22.88,
+            28.08,
+            22.88
+          ],
+          "Pepperoni, sausage, ham, bacon"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Veggie",
+          [
+            13.52,
+            18.72,
+            22.88,
+            28.08,
+            22.88
+          ],
+          "Mushrooms, green peppers, black olives, onions, banana peppers"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "BLT",
+          [
+            13.52,
+            18.72,
+            22.88,
+            28.08,
+            22.88
+          ],
+          "Bacon, ham, lettuce, tomato, mayo, garlic butter sauce"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Caprese",
+          [
+            13.52,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Red sauce, fresh mozzarella, balsamic glaze, tomato"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Margherita",
+          [
+            14.56,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Red sauce, fresh mozzarella, virgin olive oil, tomato"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Three Cheese & Spinach",
+          [
+            13.52,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Aglio sauce, baby spinach, tomatoes, three-cheese blend"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Three Cheese & Broccoli",
+          [
+            13.52,
+            19.76,
+            23.92,
+            28.08,
+            19.76
+          ],
+          "Ranch sauce, broccoli, shredded provolone and cheddar cheese"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Chicken Bacon Ranch",
+          [
+            14.56,
+            18.72,
+            22.88,
+            28.08,
+            22.88
+          ],
+          "Grilled chicken, bacon, onions, ranch dressing"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Buffalo Chicken",
+          [
+            14.56,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Breaded chicken, Buffalo sauce, mozzarella, cheddar, onions, tomato"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Grilled Chicken, Spinach & Feta",
+          [
+            14.56,
+            23.92,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Aglio sauce, grilled chicken, baby spinach, red onions, cheese blend, feta"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Teriyaki Chicken",
+          [
+            14.56,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Johnny’s secret teriyaki sauce, grilled chicken, onion, green peppers, cheese"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Sweet Baby Ray’s BBQ",
+          [
+            14.56,
+            18.72,
+            22.88,
+            28.08,
+            22.88
+          ],
+          "Premium chicken, cheddar cheese, shredded provolone cheese"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Hawaiian Baby Ray’s",
+          [
+            14.56,
+            18.72,
+            22.88,
+            28.08,
+            22.88
+          ],
+          "Ham, bacon, shredded provolone, pineapple, roasted red peppers"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Cheeseburger Bacon",
+          [
+            14.56,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Ground beef, bacon, tomato, onion, pickle, cheddar, provolone, mozzarella"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Philly Cheesesteak",
+          [
+            14.56,
+            18.72,
+            22.88,
+            28.08,
+            22.88
+          ],
+          "Ribeye steak, green peppers, onion, Aglio sauce; horsey sauce on the side"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Meatball Parma Johnny",
+          [
+            14.56,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Pizza sauce, meatballs, pepperoni, cheese"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Italian",
+          [
+            14.56,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Aglio, pepperoni, salami, ham, tomatoes, onions, banana peppers, three-cheese blend"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Cuban",
+          [
+            14.56,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Mayo, mustard, ham, pulled pork, pickles, Swiss, three-cheese blend"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Gyro",
+          [
+            14.56,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Pizza sauce, gyro meat, onions, tomato, cheese, feta, tzatziki"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Reuben",
+          [
+            15.6,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Thousand Island dressing, corned beef, Swiss-cheese blend"
+        ]
+      ],
+      [
+        "pizza",
+        [
+          "Biscuit & Gravy",
+          [
+            13.52,
+            19.76,
+            23.92,
+            28.08,
+            23.92
+          ],
+          "Sausage gravy, biscuits, sausage, bacon, cheese"
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Sheet Pizzas",
+    "blocks": [
+      [
+        "n",
+        "All Specialty Pizzas: 1/2 Sheet $30.16 / Full Sheet $43.68."
+      ]
+    ]
+  },
+  {
+    "name": "Calzones",
+    "blocks": [
+      [
+        "n",
+        "Same Price As The Matching 6-Cut Pizza."
+      ]
+    ]
+  },
+  {
+    "name": "Flatbreads",
+    "blocks": [
+      [
+        "n",
+        "Any Specialty, Coney Style Or Build Your Own $13.52."
+      ],
+      [
+        "n",
+        "Coney: Onion, Chili, Mustard & Jumbo Hot Dogs."
+      ]
+    ]
+  },
+  {
+    "name": "Subs & Wraps",
+    "blocks": [
+      [
+        "n",
+        "With Chips Or Fries"
+      ],
+      [
+        "r",
+        [
+          "Chicken Bacon Ranch",
+          "$12.48",
+          "Grilled chicken, bacon, cheese, lettuce, tomato, ranch"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Philly",
+          "$12.48",
+          "Green peppers, onions, mushrooms, provolone"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Club",
+          "$12.48",
+          "Bacon, lettuce, tomato, mayo, provolone"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Ham & Turkey Club",
+          "$12.48",
+          "Ham, turkey, bacon, lettuce, tomato, mayo, provolone"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Philly Ribeye",
+          "$13.52",
+          "Green peppers, onions, mushrooms, provolone; horsey sauce on the side"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Italian",
+          "$12.48",
+          "Ham, salami, pepperoni, banana peppers, lettuce, tomato, onion, provolone, dressing"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Pulled Pork Sub",
+          "$12.48",
+          "½ lb BBQ pulled pork with cheddar on a sub bun"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Pulled Pork Mac & Cheese Wrap",
+          "$15.60",
+          "BBQ pulled pork, mac & cheese, cheddar"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Grilled Chicken Sandwich",
+          "$13.52",
+          "Lettuce, tomato; served on a burger bun"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Turkey Swiss Melt",
+          "$13.51",
+          "Turkey, lettuce, tomato, melted Swiss; sub bun"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Buffalo Mac & Cheese Wrap",
+          "$15.60",
+          "Crispy chicken, Buffalo sauce, mac & cheese, shredded cheese"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Meatball Sub",
+          "$12.48",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Parm Sub",
+          "$13.52",
+          "Mozzarella, marinara sauce"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Grilled Cheese",
+          "$10.40",
+          "White, wheat or rye bread"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Triple Decker BLT",
+          "$14.55",
+          "Bacon, lettuce, tomato, mayo; choice of bread"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Buffalo Chicken Wrap",
+          "$13.52",
+          "Breaded chicken, lettuce, tomato, mild sauce"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Bacon Cheeseburger Philly*",
+          "$15.60",
+          "Burger & Philly meat, bacon, American, provolone, tomato, onion, jalapeños, lettuce, mayo"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Sausage Sub",
+          "$12.48",
+          "Onions, green peppers, red sauce"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Caesar Wrap",
+          "$12.48",
+          "Grilled chicken, lettuce, cheese, Caesar dressing"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Johnny’s Cuban",
+          "$14.56",
+          "Ham, pulled pork, Swiss, mustard, pickles, mayo; sub bun"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Caprese",
+          "$14.56",
+          "Melted mozzarella, tomato, basil, mayo, balsamic glaze"
+        ]
+      ],
+      [
+        "r",
+        [
+          "BLT Wrap",
+          "$12.48",
+          "Bacon, lettuce, tomato, mayo"
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Gyros",
+    "blocks": [
+      [
+        "n",
+        "With Chips Or Fries"
+      ],
+      [
+        "r",
+        [
+          "Traditional Gyro",
+          "$13.52",
+          "Lamb & beef gyro meat, onions, tomato, tzatziki; warm pita"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Gyro",
+          "$13.52",
+          "Grilled chicken, tzatziki, tomato, lettuce, red onions; toasted pita"
+        ]
+      ],
+      [
+        "n",
+        "Extra Gyro Meat Or Chicken $4.16"
+      ]
+    ]
+  },
+  {
+    "name": "Corned Beef & Reubens",
+    "blocks": [
+      [
+        "n",
+        "With Chips Or Fries"
+      ],
+      [
+        "r",
+        [
+          "Corned Beef Sandwich",
+          "$14.56",
+          "8 oz lean corned beef on rye; Thousand Island on the side"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Reuben",
+          "$14.56",
+          "8 oz corned beef, Swiss, sauerkraut, rye; Thousand Island on the side"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Turkey Reuben",
+          "$14.56",
+          "Turkey, Swiss, sauerkraut; Thousand Island on the side"
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Burgers",
+    "blocks": [
+      [
+        "n",
+        "With Chips Or Fries"
+      ],
+      [
+        "r",
+        [
+          "Single Burger*",
+          "$11.44",
+          "Lettuce, tomato, onions, pickles"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Double Burger*",
+          "$13.52",
+          "Lettuce, tomato, onions, pickles"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Italian Roman Burger*",
+          "$14.56",
+          "Two patties, salami, pepperoni, provolone, tomato, lettuce, onion, mayo, Italian dressing"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Patty Melt*",
+          "$13.52",
+          "White, wheat or rye; sautéed onions, choice of cheese"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Johnny Boy*",
+          "$14.56",
+          "Two patties, American cheese, secret sauce, lettuce"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chili Burger*",
+          "$13.52",
+          "Jalapeños, chili, pepper jack cheese"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Breakfast Burger*",
+          "$14.56",
+          "Hash brown patty, bacon, egg over medium, American cheese"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Cajun Burger*",
+          "$14.56",
+          "Ghost pepper salsa, fresh jalapeños, Cajun, pepper jack"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Western Burger*",
+          "$14.56",
+          "Bacon, cheddar, BBQ sauce, onion ring"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Bacon Double Burger*",
+          "$14.56",
+          "Two patties, double cheese, double bacon"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Caprese Burger*",
+          "$14.56",
+          "Fresh mozzarella, tomato, balsamic glaze, fresh basil, basil mayo"
+        ]
+      ],
+      [
+        "n",
+        "Cheese: American, Cheddar, Swiss, Provolone Or Pepper Jack. Extra Cheese $1.04."
+      ]
+    ]
+  },
+  {
+    "name": "Hot Dogs",
+    "blocks": [
+      [
+        "r",
+        [
+          "Jumbo Hot Dog",
+          "$5.20",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Loaded Dog",
+          "$6.24",
+          "Chili, cheese, mustard, onions"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Pretzel Dog",
+          "$5.20",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Single Corn Dog",
+          "$3.12",
+          ""
+        ]
+      ],
+      [
+        "n",
+        "Add Chili $0.83 / Cheese $0.52"
+      ],
+      [
+        "n",
+        "Dog Meal Deals Include Chips Or Fries & A Fountain Drink."
+      ],
+      [
+        "r",
+        [
+          "Two Corn Dogs",
+          "$7.28",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Two Loaded Dogs",
+          "$11.44",
+          "Chili, cheese, mustard, onions"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Two Plain Dogs",
+          "$10.40",
+          ""
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Salads",
+    "blocks": [
+      [
+        "r",
+        [
+          "House",
+          "$7.28",
+          "Tomato, onions, cheese, egg"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Cobb",
+          "$11.44",
+          "Tomato, egg, cheese, bacon"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Tuna",
+          "$11.44",
+          "Banana peppers, tomato, cheese"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chef",
+          "$11.44",
+          "Tomato, ham, turkey, egg, cheese"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Antipasta",
+          "$11.44",
+          "Cheese, ham, salami, pepperoni, tomato, banana peppers"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Caesar",
+          "$12.48",
+          "Iceberg lettuce, grilled chicken, croutons; Caesar dressing"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Spinach",
+          "$15.60",
+          "Chicken, turkey or tuna; red onions, cheese, tomato, egg"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Gyro",
+          "$14.56",
+          "Iceberg lettuce, tomato, onion, feta, mozzarella; tzatziki"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Crispy Chicken",
+          "$14.56",
+          "Crispy chicken, choice of sauce, green peppers, tomato, black olives"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Side Salad",
+          "$4.16",
+          "Lettuce, cheese, tomato, onions"
+        ]
+      ],
+      [
+        "n",
+        "<b>Salad Add-Ons:</b> Chicken $5.20 / Shrimp $7.28."
+      ],
+      [
+        "n",
+        "<b>Dressings:</b><br/>Ranch, Italian, Blue Cheese, Poppyseed, Balsamic Vinaigrette, Caesar, Honey Mustard, Red French, Thousand Island & Tzatziki."
+      ]
+    ]
+  },
+  {
+    "name": "Johnny's Signature Pastas",
+    "blocks": [
+      [
+        "n",
+        "With Side Salad & Garlic Bread. Penne Or Fettuccine."
+      ],
+      [
+        "r",
+        [
+          "Red Or Aglio Pasta",
+          "$11.44",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Alfredo Pasta",
+          "$14.56",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Broccoli Alfredo",
+          "$16.64",
+          "Chicken & Broccoli In Alfredo Sauce"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Mushroom Spinach Alfredo",
+          "$15.60",
+          "Sautéed Mushrooms & Spinach In Alfredo"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Parmesan",
+          "$17.68",
+          "Breaded Chicken With Red Sauce"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Parm With Alfredo",
+          "$19.76",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Cincinnati Chili",
+          "$16.64",
+          "Homemade Chili, Cheddar & Onions"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Buffalo Chicken Alfredo",
+          "$17.68",
+          "Breaded Chicken In Buffalo Alfredo Sauce"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Shrimp Scampi*",
+          "$18.72",
+          "Shrimp Tossed In Aglio Sauce"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Shrimp Broccoli Alfredo*",
+          "$18.72",
+          "Sautéed Shrimp & Broccoli In Alfredo"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Extra Garlic Bread",
+          "$0.83",
+          ""
+        ]
+      ],
+      [
+        "n",
+        "Add Meatballs Or Sausage $4.16."
+      ]
+    ]
+  },
+  {
+    "name": "Fish & Seafood",
+    "blocks": [
+      [
+        "n",
+        "Cod Or Perch; Chips Or Fries, Tartar & Slaw"
+      ],
+      [
+        "r",
+        [
+          "1-Piece Fish Meal*",
+          "$12.48",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "2-Piece Fish Meal*",
+          "$16.64",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "3-Piece Fish Meal*",
+          "$18.72",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Shrimp Basket*",
+          "$10.40",
+          ""
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Fish Subs & Wraps",
+    "blocks": [
+      [
+        "n",
+        "With Chips Or Fries"
+      ],
+      [
+        "r",
+        [
+          "Cod Or Perch Sub*",
+          "$12.48",
+          "Lettuce, Tomato & Tartar"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Tuna Melt Sub",
+          "$12.48",
+          "Lettuce, Tomato, Provolone; Served Hot"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Cold Tuna Sub / Wrap",
+          "$11.44",
+          "Lettuce, Tomato & Cheese"
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Fried Chicken Dinners & Ribs",
+    "blocks": [
+      [
+        "r",
+        [
+          "4-Piece Dinner",
+          "$17.68",
+          "2 Small Sides & 1 Biscuit"
+        ]
+      ],
+      [
+        "r",
+        [
+          "8-Piece Dinner",
+          "$33.28",
+          "2 Large Sides & 2 Biscuits"
+        ]
+      ],
+      [
+        "r",
+        [
+          "12-Piece Dinner",
+          "$41.60",
+          "3 Large Sides & 4 Biscuits"
+        ]
+      ],
+      [
+        "r",
+        [
+          "½ Slab Ribs",
+          "$22.87",
+          "2 Sides · BBQ Or Dry"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Full Slab Ribs",
+          "$34.31",
+          "2 Sides · BBQ Or Dry"
+        ]
+      ],
+      [
+        "n",
+        "Side Choices For Fried Chicken Dinners & Ribs Only: Fries, Tater Tots, Mac & Cheese, Coleslaw, Side Salad, Macaroni Salad, Pasta Salad Or Potato Salad. 1/2 Order Onion Rings +$4.16."
+      ]
+    ]
+  },
+  {
+    "name": "Chicken Wings",
+    "blocks": [
+      [
+        "n",
+        "Traditional Or Boneless"
+      ],
+      [
+        "r",
+        [
+          "6 / 12 / 18 / 24 Wings",
+          "$10.39 / $16.63 / $22.87 / $31.19",
+          ""
+        ]
+      ],
+      [
+        "n",
+        "Sauces: Mild, Hot, Spicy Garlic, Teriyaki, Honey Mustard, BBQ, Butter Garlic, Sweet Heat Chili, Johnny's Hott Hott, Ghost Pepper, Buffalo Ranch, Butter Garlic Parm, Spicy Garlic Parm & Spicy BBQ. Plain / No Sauce Available. Ranch Available With 12, 18 Or 24 Wings."
+      ],
+      [
+        "n",
+        "Dry Rubs: Cajun, Six Pepper, Sea Salt & Cracked Pepper, Garlic & Ghost Pepper."
+      ]
+    ]
+  },
+  {
+    "name": "Kids Meals",
+    "blocks": [
+      [
+        "n",
+        "With Chips Or Fries & A Small Drink"
+      ],
+      [
+        "r",
+        [
+          "Grilled Cheese / Cheeseburger* / Corn Dog / Hot Dog / 4-Piece Nuggets",
+          "$6.24 Each",
+          ""
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Pierogies",
+    "blocks": [
+      [
+        "n",
+        "3 Per Order, Except Plain Potato & Cheese"
+      ],
+      [
+        "r",
+        [
+          "Bacon & Cheddar",
+          "$12.48",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Reuben",
+          "$15.60",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Onion, Mushroom & Pepper",
+          "$12.48",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Pulled Pork",
+          "$15.60",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Broccoli Alfredo",
+          "$16.64",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Philly Cheesesteak",
+          "$15.60",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Beef & Onions",
+          "$14.56",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Spinach Alfredo & Feta",
+          "$15.60",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Double Sausage & Onions",
+          "$15.60",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Buffalo Chicken Alfredo",
+          "$15.60",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Philly",
+          "$14.56",
+          ""
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Plain Potato & Cheese Pierogies",
+    "blocks": [
+      [
+        "r",
+        [
+          "1 / 2 / 3 Pieces",
+          "$3.43 / $6.24 / $9.36",
+          ""
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Appetizers",
+    "blocks": [
+      [
+        "r",
+        [
+          "Jumbo Soft Pretzel",
+          "$6.24",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Potato Skins · 4",
+          "$10.40",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Mozzarella Wedges · 5",
+          "$7.28",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Jalapeño Poppers · 6",
+          "$7.28",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Fried Pickles",
+          "$8.32",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Mac & Cheese Bites",
+          "$8.32",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Breaded Zucchini",
+          "$9.36",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Breaded Mushrooms",
+          "$8.32",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Broccoli Cheddar Bites",
+          "$8.32",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Garlic Parm Bites",
+          "$8.32",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "3 Meatballs With Cheese",
+          "$6.24",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Fries",
+          "$6.24",
+          "12 Pieces & A Small Dressing"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Strips - 4 / 6 Pieces",
+          "$11.44 / $14.56",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Strip Basket - 4 / 6 Pieces",
+          "$14.56 / $16.64",
+          "With Chips Or Fries & Dipping Sauce"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Loaded Fries Or Tots",
+          "$11.44",
+          "Mozzarella, Cheddar & Bacon; Chili & Sour Cream On The Side"
+        ]
+      ],
+      [
+        "n",
+        "Pretzel Beer Cheese +$1.04."
+      ]
+    ]
+  },
+  {
+    "name": "Cheese Bread",
+    "blocks": [
+      [
+        "r",
+        [
+          "Small / Medium / Large",
+          "$7.80 / $10.40 / $15.60",
+          ""
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "Sides & Chili",
+    "blocks": [
+      [
+        "r",
+        [
+          "Regular Fries",
+          "$3.64",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Large Fries",
+          "$6.24",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Tater Tots",
+          "$5.20",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Onion Rings",
+          "$8.31",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Coleslaw · Small / Large",
+          "$3.12 / $4.16",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Mac & Cheese · Small / Large",
+          "$4.16 / $6.24",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Signature Chili - Cup / Bowl / Quart",
+          "$4.16 / $5.20 / $13.52",
+          ""
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "South Of The Border",
+    "blocks": [
+      [
+        "r",
+        [
+          "Cheese Quesadilla",
+          "$7.28",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Chicken Quesadilla",
+          "$11.44",
+          "Chicken, Green Peppers, Tomato, Onions & Cheese"
+        ]
+      ],
+      [
+        "r",
+        [
+          "Philly Steak Quesadilla",
+          "$13.52",
+          "Green Peppers, Tomato, Onions & Cheese"
+        ]
+      ],
+      [
+        "n",
+        "Chicken & Philly Quesadillas Include Salsa & Sour Cream."
+      ]
+    ]
+  }
+]
