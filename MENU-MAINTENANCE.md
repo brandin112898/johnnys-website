@@ -1,9 +1,13 @@
-# Website maintenance
+# Johnny’s website menu
 
-The owner-approved full menu appears at /menu/ as searchable HTML and defaults to all 32 categories. A Show Full Menu button resets search and category filtering. The downloadable legal takeout PDF remains the approved food-only print version.
+The owner approved the new photo-card menu on October 31, 2026. The public /menu/ defaults to Full Menu and includes 249 selectable entries across 15 families, preserving all 32 approved source sections. Size and preparation choices previously combined in print rows now have labelled options or individual cards. Search covers all menu items. Item details show full descriptions and explicit size prices, including specialty sheet pizzas, calzones, and flatbreads.
 
-On October 31, 2026, desserts, drinks, ice cream, and catering were checked in Johnny’s Restaurant POS. At the owner’s request, all items in these four groups are included, including inactive/out-of-stock entries. Unavailable items are labelled Currently Unavailable. Previously removed food items remain excluded. Non-cash prices are displayed. Coffee, fountain drink, and ice cream size prices were verified through linked modifier groups. This website is a maintained snapshot, not an automatic POS feed. Recheck availability when updating it.
+Food photos use existing SpotOn image URLs. Desserts, drinks, ice cream, and catering include unavailable entries at the owner’s request; these are labelled Currently Unavailable. Discontinued foods previously excluded remain excluded. All displayed prices follow the approved non-cash menu. Half-pizza toppings round up to the next cent.
 
-All four navigation pages share /assets/site.css and identical headers and footers, based on the home page theme. Employment form logic and field IDs are preserved. The home page footer includes Thursday in the Monday–Thursday hours, matching the approved menu. Source also resides in iCloud/Johnny’s Grill and Pizzeria. Previous source copies are in BLD-Tech Website/output/website-backups.
+The page is a maintained snapshot, not an automatic POS feed. Keep inline item data in menu/index.html and data/menu-items.json synchronized when updating it. The approved print PDF remains food-only. Existing data/menu.json is retained as the previous structured menu source.
 
-Validation: 390px mobile overflow checks on all pages; matching theme styles; menu search/filter/reset; dessert/drink/catering data and size prices; unchanged application scripts and field IDs.
+The other pages share assets/site.css. Menu-specific styles are in assets/menu.css. About and Employment use the homepage split photo layout. Existing form behavior and API functions are preserved.
+
+A complete pre-publication website backup is saved in iCloud/Johnny’s Grill and Pizzeria Backups, in the dated before-approved-menu folder. Cloudflare also retains previous deployments for rollback.
+
+Validation: all 32 sections retained; 249 item entries; exclusions; category navigation; global search; pizza detail size prices; mobile overflow and item dialog; live menu and downloadable print menu.
