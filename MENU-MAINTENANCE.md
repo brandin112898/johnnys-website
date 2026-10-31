@@ -1,9 +1,9 @@
-# Johnny’s Website Menu
+# Website maintenance
 
-The public /menu/ page shows the owner-approved food menu as semantic HTML, with search, category filtering, and a download of the approved legal-size takeout PDF. It uses the approved non-cash prices, the removed-item list, breakfast hours 8 AM–3:30 PM, and the later Cheese Bread and Chicken Strip Basket label corrections. It is a maintained snapshot, not an automatic SpotOn feed. Update it when the owner approves menu changes.
+The owner-approved full menu appears at /menu/ as searchable HTML and defaults to all 32 categories. A Show Full Menu button resets search and category filtering. The downloadable legal takeout PDF remains the approved food-only print version.
 
-Editable website source is also saved in iCloud/Johnny’s Grill and Pizzeria. The original iCloud source was backed up under BLD-Tech Website/output/website-backups/20261031-173635. Existing home, about, employment, employment API, and the previously deployed read-only menu API were preserved.
+On October 31, 2026, desserts, drinks, ice cream, and catering were checked in Johnny’s Restaurant POS. Only active items were added; items flagged out of stock are labelled Currently Unavailable. Non-cash prices are displayed. Coffee, fountain drink, and ice cream size prices were verified through linked modifier groups. This website is a maintained snapshot, not an automatic POS feed. Recheck availability when updating it.
 
-Published October 31, 2026 to the existing Cloudflare Pages project johnnys-website (production branch main). Deployment 572f5f46. Prior production deployment 7dec2282 remains available for rollback.
+All four navigation pages share /assets/site.css and identical headers and footers, based on the home page theme. Employment form logic and field IDs are preserved. The home page footer includes Thursday in the Monday–Thursday hours, matching the approved menu. Source also resides in iCloud/Johnny’s Grill and Pizzeria. Previous source copies are in BLD-Tech Website/output/website-backups.
 
-Validation: approved food-data transfer; discontinued-item exclusion; browser search and category filtering; mobile viewport 390px without horizontal overflow; live website and takeout PDF.
+Validation: 390px mobile overflow checks on all pages; matching theme styles; menu search/filter/reset; dessert/drink/catering data and size prices; unchanged application scripts and field IDs.

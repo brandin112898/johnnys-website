@@ -497,20 +497,28 @@
       }
     }
   </style>
+<link rel="stylesheet" href="/assets/site.css?v=20261031-2">
 </head>
 
-<body>
+<body class="site-page site-employment">
 
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand-title">Johnny's Grill & Pizzeria</div>
+      <a class="brand" href="/" aria-label="Johnny's Grill &amp; Pizzeria Home">
+        <div class="brand-title">Johnny's Grill &amp; Pizzeria</div>
+        <div class="brand-sub">Locally Owned • Newbury Township, Ohio</div>
+      </a>
 
-      <div class="nav">
-        <a class="btn btn-secondary" href="/" target="_top">Home</a>
-        <a class="btn btn-secondary" href="/menu" target="_top">Menu</a>
-        <a class="btn btn-secondary" href="/about" target="_top">About</a>
-        <a class="btn btn-secondary" href="/employment" target="_top">Employment</a>
-        <a class="btn btn-secondary" href="https://deals.spoton.com/682b7aca501c6df83e06a58a/join-loyalty?utm_medium=link" target="_blank">Loyalty</a>
+      <nav class="nav-links">
+        <a href="/" target="_top">Home</a>
+        <a href="/menu" target="_top">Menu</a>
+        <a href="/about" target="_top">About Us</a>
+        <a href="/employment" target="_top" aria-current="page">Employment</a>
+        <a href="https://deals.spoton.com/682b7aca501c6df83e06a58a/join-loyalty?utm_medium=link" target="_blank">Loyalty</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="tel:4405641331">Call</a>
         <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
       </div>
     </div>
@@ -678,7 +686,30 @@
   </section>
 
   <footer class="footer">
-    Johnny’s Grill & Pizzeria • Newbury Township, Ohio
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-title">Johnny's Grill &amp; Pizzeria</div>
+        <div class="footer-copy">Locally Owned • Newbury Township, Ohio</div>
+      </div>
+
+      <div>
+        <div class="footer-label">Hours</div>
+        <div class="footer-list">
+          <div>Monday–Thursday: 8:00 AM – 8:00 PM</div>
+          <div>Friday–Saturday: 8:00 AM – 9:00 PM</div>
+          <div>Closed Sunday</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-label">Contact</div>
+        <div class="footer-copy">Phone: <a href="tel:4405641331">440-564-1331</a></div>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="https://order.spoton.com/hcs-johnnys-grill-and-pizzeria-23905/newbury-oh/682b7aca501c6df83e06a58a" target="_blank">Order Online</a>
+          <a class="btn btn-secondary" href="https://deals.spoton.com/682b7aca501c6df83e06a58a/join-loyalty?utm_medium=link" target="_blank">Loyalty</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <template id="schoolTemplate">
