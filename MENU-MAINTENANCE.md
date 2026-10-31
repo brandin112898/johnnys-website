@@ -11,3 +11,7 @@ The other pages share assets/site.css. Menu-specific styles are in assets/menu.c
 A complete pre-publication website backup is saved in iCloud/Johnny’s Grill and Pizzeria Backups, in the dated before-approved-menu folder. Cloudflare also retains previous deployments for rollback.
 
 Validation: all 32 sections retained; 249 item entries; exclusions; category navigation; global search; pizza detail size prices; mobile overflow and item dialog; live menu and downloadable print menu.
+
+## October 31 audit
+
+Fresh Restaurant POS export included 441 item/size records. Compared 180 fixed-price entries and 586 size, topping, half-topping and paid add-on values, with no differences in those comparisons. Corrected 16 specialty-pizza card starting-price labels that had incorrectly used a cheaper flatbread option. At the owner’s explicit approval, added garlic dipping sauce ($1.04), homemade chips ($0.73), a bag of tortilla chips ($6.24), a side of dressing ($1.04), and a side of broccoli ($3.12). Renamed Signature Chili to Soup Of The Day with flavors varying, as confirmed by the owner. Website now contains 254 entries. All prior discontinued-item exclusions are retained.

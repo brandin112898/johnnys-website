@@ -1738,7 +1738,7 @@
     ]
   },
   {
-    "name": "Sides & Chili",
+    "name": "Sides & Soup",
     "blocks": [
       [
         "r",
@@ -1791,8 +1791,48 @@
       [
         "r",
         [
-          "Signature Chili - Cup / Bowl / Quart",
+          "Soup Of The Day - Cup / Bowl / Quart",
           "$4.16 / $5.20 / $13.52",
+          "Flavors Vary. Ask About Today’s Soup."
+        ]
+      ],
+      [
+        "r",
+        [
+          "Garlic Dipping Sauce",
+          "$1.04",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Homemade Chips",
+          "$0.73",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Bag Of Tortilla Chips",
+          "$6.24",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Side Of Dressing",
+          "$1.04",
+          ""
+        ]
+      ],
+      [
+        "r",
+        [
+          "Side Of Broccoli",
+          "$3.12",
           ""
         ]
       ]

@@ -108,7 +108,7 @@
   {
     "id": 3,
     "name": "Supreme",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Pepperoni, Sausage, Ham, Green Peppers, Onions, Black Olives, Mushrooms",
     "options": [
       [
@@ -155,7 +155,7 @@
   {
     "id": 4,
     "name": "Meaty",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Pepperoni, Sausage, Ham, Bacon",
     "options": [
       [
@@ -343,7 +343,7 @@
   {
     "id": 8,
     "name": "Margherita",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Red Sauce, Fresh Mozzarella, Virgin Olive Oil, Tomato",
     "options": [
       [
@@ -484,7 +484,7 @@
   {
     "id": 11,
     "name": "Chicken Bacon Ranch",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Grilled Chicken, Bacon, Onions, Ranch Dressing",
     "options": [
       [
@@ -531,7 +531,7 @@
   {
     "id": 12,
     "name": "Buffalo Chicken",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Breaded Chicken, Buffalo Sauce, Mozzarella, Cheddar, Onions, Tomato",
     "options": [
       [
@@ -578,7 +578,7 @@
   {
     "id": 13,
     "name": "Grilled Chicken, Spinach & Feta",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Aglio Sauce, Grilled Chicken, Baby Spinach, Red Onions, Cheese Blend, Feta",
     "options": [
       [
@@ -625,7 +625,7 @@
   {
     "id": 14,
     "name": "Teriyaki Chicken",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Johnny’s Secret Teriyaki Sauce, Grilled Chicken, Onion, Green Peppers, Cheese",
     "options": [
       [
@@ -672,7 +672,7 @@
   {
     "id": 15,
     "name": "Sweet Baby Ray’s BBQ",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Premium Chicken, Cheddar Cheese, Shredded Provolone Cheese",
     "options": [
       [
@@ -719,7 +719,7 @@
   {
     "id": 16,
     "name": "Hawaiian Baby Ray’s",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Ham, Bacon, Shredded Provolone, Pineapple, Roasted Red Peppers",
     "options": [
       [
@@ -766,7 +766,7 @@
   {
     "id": 17,
     "name": "Cheeseburger Bacon",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Ground Beef, Bacon, Tomato, Onion, Pickle, Cheddar, Provolone, Mozzarella",
     "options": [
       [
@@ -813,7 +813,7 @@
   {
     "id": 18,
     "name": "Philly Cheesesteak",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Ribeye Steak, Green Peppers, Onion, Aglio Sauce; Horsey Sauce On The Side",
     "options": [
       [
@@ -860,7 +860,7 @@
   {
     "id": 19,
     "name": "Meatball Parma Johnny",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Pizza Sauce, Meatballs, Pepperoni, Cheese",
     "options": [
       [
@@ -907,7 +907,7 @@
   {
     "id": 20,
     "name": "Italian",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Aglio, Pepperoni, Salami, Ham, Tomatoes, Onions, Banana Peppers, Three-Cheese Blend",
     "options": [
       [
@@ -954,7 +954,7 @@
   {
     "id": 21,
     "name": "Cuban",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Mayo, Mustard, Ham, Pulled Pork, Pickles, Swiss, Three-Cheese Blend",
     "options": [
       [
@@ -1001,7 +1001,7 @@
   {
     "id": 22,
     "name": "Gyro",
-    "price": "From $13.52",
+    "price": "From $14.56",
     "description": "Pizza Sauce, Gyro Meat, Onions, Tomato, Cheese, Feta, Tzatziki",
     "options": [
       [
@@ -1048,7 +1048,7 @@
   {
     "id": 23,
     "name": "Reuben",
-    "price": "From $13.52",
+    "price": "From $15.60",
     "description": "Thousand Island Dressing, Corned Beef, Swiss-Cheese Blend",
     "options": [
       [
@@ -1411,7 +1411,7 @@
     "options": [],
     "image": "",
     "unavailable": false,
-    "section": "Sides & Chili"
+    "section": "Sides & Soup"
   },
   {
     "id": 51,
@@ -1421,7 +1421,7 @@
     "options": [],
     "image": "",
     "unavailable": false,
-    "section": "Sides & Chili"
+    "section": "Sides & Soup"
   },
   {
     "id": 52,
@@ -1431,7 +1431,7 @@
     "options": [],
     "image": "https://res.cloudinary.com/emaginepos/image/upload/v1767199266/menu/prod/682cab135bd6bf7137feb1d3/32bfy1gehjeijegqyy1tqfwlvq_1767199253571.jpg",
     "unavailable": false,
-    "section": "Sides & Chili"
+    "section": "Sides & Soup"
   },
   {
     "id": 53,
@@ -1441,7 +1441,7 @@
     "options": [],
     "image": "https://res.cloudinary.com/emaginepos/image/upload/v1767199350/menu/prod/682cab135bd6bf7137feb1d3/wzckflq5orc5jngnyp04k5jqwa_1767199340073.jpg",
     "unavailable": false,
-    "section": "Sides & Chili"
+    "section": "Sides & Soup"
   },
   {
     "id": 54,
@@ -1460,7 +1460,7 @@
     ],
     "image": "",
     "unavailable": false,
-    "section": "Sides & Chili"
+    "section": "Sides & Soup"
   },
   {
     "id": 55,
@@ -1479,13 +1479,13 @@
     ],
     "image": "",
     "unavailable": false,
-    "section": "Sides & Chili"
+    "section": "Sides & Soup"
   },
   {
     "id": 56,
-    "name": "Signature Chili",
+    "name": "Soup Of The Day",
     "price": "From $4.16",
-    "description": "",
+    "description": "Flavors Vary. Ask About Today’s Soup.",
     "options": [
       [
         "Cup",
@@ -1502,7 +1502,7 @@
     ],
     "image": "",
     "unavailable": false,
-    "section": "Sides & Chili"
+    "section": "Sides & Soup"
   },
   {
     "id": 57,
@@ -3574,5 +3574,55 @@
     "image": "",
     "unavailable": false,
     "section": "Catering"
+  },
+  {
+    "id": 250,
+    "name": "Garlic Dipping Sauce",
+    "price": "$1.04",
+    "description": "",
+    "options": [],
+    "image": "https://res.cloudinary.com/emaginepos/image/upload/v1773837800/menu/prod/682cab135bd6bf7137feb1d3/wo4req3rarbsng3nakt0ftzo5u_1773837791243.jpg",
+    "unavailable": false,
+    "section": "Sides & Soup"
+  },
+  {
+    "id": 251,
+    "name": "Homemade Chips",
+    "price": "$0.73",
+    "description": "",
+    "options": [],
+    "image": "",
+    "unavailable": false,
+    "section": "Sides & Soup"
+  },
+  {
+    "id": 252,
+    "name": "Bag Of Tortilla Chips",
+    "price": "$6.24",
+    "description": "",
+    "options": [],
+    "image": "",
+    "unavailable": false,
+    "section": "Sides & Soup"
+  },
+  {
+    "id": 253,
+    "name": "Side Of Dressing",
+    "price": "$1.04",
+    "description": "",
+    "options": [],
+    "image": "",
+    "unavailable": false,
+    "section": "Sides & Soup"
+  },
+  {
+    "id": 254,
+    "name": "Side Of Broccoli",
+    "price": "$3.12",
+    "description": "",
+    "options": [],
+    "image": "",
+    "unavailable": false,
+    "section": "Sides & Soup"
   }
 ]
