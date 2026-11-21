@@ -68,8 +68,122 @@
 
 
 <link rel="stylesheet" href="/assets/site.css?v=20261031-3">
+<style>
+html:has(#holiday-hours[open]) { overflow: hidden; }
+#holiday-hours {
+  box-sizing: border-box;
+  width: min(36rem, calc(100% - 2rem));
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: clamp(3rem, 6vw, 4rem) clamp(1rem, 5vw, 3.5rem) 2rem;
+  overflow: auto;
+  border: 1px solid #f38b40;
+  border-radius: 1.4rem;
+  color: #fff5e7;
+  background: radial-gradient(ellipse at bottom, #49200f, transparent 63%), #171311;
+  box-shadow: 0 0 0 4px #f45d1820, 0 0 48px #f349124a;
+  text-align: center;
+  font: 1rem/1.45 system-ui, sans-serif;
+}
+#holiday-hours::backdrop {
+  background: radial-gradient(ellipse at bottom, #51230ff5, #100e0df9 72%);
+}
+#holiday-hours p { margin: 1rem 0; }
+#holiday-hours .holiday-eyebrow {
+  margin: 0 0 .8rem;
+  color: #ffab65;
+  font-weight: 800;
+  font-size: .82rem;
+  letter-spacing: .22em;
+}
+#holiday-hours h2 {
+  margin: 0;
+  color: #fff5e7;
+  font: bold clamp(2rem, 5vw, 3.25rem)/1.06 Georgia, serif;
+  text-wrap: balance;
+}
+#holiday-hours .holiday-dates {
+  padding: .85rem;
+  border: 1px solid #ac5a32;
+  border-radius: .65rem;
+  background: #351c13;
+  color: #ffcc92;
+  font-weight: 750;
+  text-wrap: balance;
+}
+#holiday-hours button {
+  min-height: 48px;
+  cursor: pointer;
+  font: inherit;
+}
+#holiday-hours button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+#holiday-hours .holiday-enter {
+  width: 100%;
+  margin-top: .35rem;
+  border: none;
+  border-radius: .55rem;
+  background: linear-gradient(120deg, #ffbd65, #ff873e);
+  color: #271106;
+  font-weight: 850;
+  letter-spacing: .1em;
+}
+#holiday-hours .holiday-close {
+  position: absolute;
+  top: .25rem;
+  right: .25rem;
+  width: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff1dd;
+  font-size: 1.65rem;
+}
+#holiday-hours::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 1.35rem;
+  left: 21%;
+  width: 3px;
+  height: 6px;
+  border-radius: 90% 10% 80% 20%;
+  background: #ffad60;
+  box-shadow: -18px 7px 3px #e54e19, 27px -3px 1px #ffcf80, 44px 4px 2px #e46928;
+}
+@media (prefers-reduced-motion: no-preference) {
+  #holiday-hours[open]::before { animation: holiday-embers 3s ease-in-out infinite alternate; }
+  @keyframes holiday-embers { to { transform: translate(4px,-6px); opacity: .4; } }
+}
+</style>
 </head>
 <body>
+<dialog id="holiday-hours" aria-labelledby="holiday-title" aria-describedby="holiday-detail holiday-dates">
+  <form method="dialog">
+    <p class="holiday-eyebrow">ATTENTION</p>
+    <h2 id="holiday-title">We will be closed for Thanksgiving.</h2>
+    <p id="holiday-detail">Johnny’s Grill &amp; Pizzeria will also be closed the following days:</p>
+    <p class="holiday-dates" id="holiday-dates">Saturday, December 5th thru Tuesday, December 8th</p>
+    <p>Thank you, Johnny’s</p>
+    <button class="holiday-enter" autofocus>ENTER SITE</button>
+    <button class="holiday-close" aria-label="Close holiday notice">×</button>
+  </form>
+</dialog>
+<script>
+(() => {
+  const notice = document.getElementById('holiday-hours');
+  const key = 'johnnys-holiday-2026-dismissed';
+  try {
+    if (sessionStorage.getItem(key)) return;
+  } catch { /* The notice still works when storage is unavailable. */ }
+  notice.addEventListener('close', () => {
+    try { sessionStorage.setItem(key, '1'); } catch {}
+    document.querySelector('a.brand')?.focus({preventScroll: true});
+  });
+  notice.showModal();
+})();
+</script>
+
 
   <header class="topbar">
     <div class="container topbar-inner">
